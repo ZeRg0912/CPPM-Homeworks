@@ -63,8 +63,8 @@ int main() {
 			std::cout << "OUT file can't open!";
 		}		
 		write.close();
-		delete inArray1;
-		delete inArray2;
+		delete[] inArray1;
+		delete[] inArray2;
 	}
 	else {
 		std::cout << "File can't open!" << std::endl;
