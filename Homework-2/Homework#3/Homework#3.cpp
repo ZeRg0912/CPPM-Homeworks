@@ -34,13 +34,13 @@ int main()
     system("chcp 1251"); // настраиваем кодировку консоли
     system("cls");
 
-    Adress adr;
+    Adress* AdrArray = new Adress[5];
 
-    out_Adress(&adr);
+    out_Adress(&AdrArray[0]);
 
-    change_Adress(&adr, "Санкт-Петербург", "Ленина", 59, 143, 953769);
+    change_Adress(&AdrArray[1], "Санкт-Петербург", "Ленина", 59, 143, 953769);
 
-    out_Adress(&adr);
+    out_Adress(&AdrArray[1]);
 
     return 0;
 }
