@@ -3,21 +3,17 @@
 
 using namespace std;
 
-struct bank_details {
+struct bankDetails {
     long AccountNumber;
     string Name;
     long Balance;
  };
 
-void changeBankBalance(bank_details* person, int newBalance) {
+void changeBankBalance(bankDetails* person, int newBalance) {
     person->Balance = newBalance;
 }
 
-void out_bank_details(bank_details* person) {
-    /*cout << "Город: " << person->AccountNumber << endl;
-    cout << "Индекс: " << person->Name << endl;
-    cout << "Индекс: " << person->Balance << endl;
-    cout << endl;*/
+void outBankDetails(bankDetails* person) {
     cout << "Ваш счет: " << person->AccountNumber << ", " << person->Name << ", " << person->Balance << endl;
 }
 
@@ -27,7 +23,7 @@ int main()
     system("chcp 1251"); // настраиваем кодировку консоли
     system("cls");
 
-    bank_details person;
+    bankDetails person;
     int newBalance;
 
     cout << "Введите номер счета: ";
@@ -40,8 +36,6 @@ int main()
     cin >> newBalance;
 
     changeBankBalance(&person, newBalance);
-
-    //cout << "Ваш счет: " << person.Name << ", " << person.AccountNumber << ", " << person.Balance << endl;
-    out_bank_details(&person);
+    outBankDetails(&person);
     return 0;
 }
