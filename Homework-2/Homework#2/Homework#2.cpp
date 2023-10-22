@@ -9,6 +9,10 @@ struct bank_details {
     long Balance;
  };
 
+void changeBankBalance(bank_details* person, int newBalance) {
+    person->Balance = newBalance;
+}
+
 int main()
 {
     setlocale(LC_ALL, "Russian"); // задаём русский текст
@@ -16,6 +20,7 @@ int main()
     system("cls");
 
     bank_details person;
+    int newBalance;
 
     cout << "Введите номер счета: ";
     cin >> person.AccountNumber;
@@ -24,7 +29,9 @@ int main()
     cout << "Введите баланс: ";
     cin >> person.Balance;
     cout << "Введите новый баланс: ";
-    cin >> person.Balance;
+    cin >> newBalance;
+
+    changeBankBalance(&person, newBalance);
 
     cout << "Ваш счет: " << person.Name << ", " << person.AccountNumber << ", " << person.Balance << endl;
 }

@@ -14,7 +14,7 @@ struct Adress {
 void change_Adress(Adress* adress, string City, string Street, int numHouse, int numFlat, int Index) {
     {   adress->City = City;
         adress->Street = Street;
-        adress->numHouse - numHouse;
+        adress->numHouse = numHouse;
         adress->numFlat = numFlat;
         adress->Index = Index; }
 }
