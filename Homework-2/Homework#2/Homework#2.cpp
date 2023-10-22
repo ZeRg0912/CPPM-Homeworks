@@ -13,6 +13,14 @@ void changeBankBalance(bank_details* person, int newBalance) {
     person->Balance = newBalance;
 }
 
+void out_bank_details(bank_details* person) {
+    /*cout << "Город: " << person->AccountNumber << endl;
+    cout << "Индекс: " << person->Name << endl;
+    cout << "Индекс: " << person->Balance << endl;
+    cout << endl;*/
+    cout << "Ваш счет: " << person->AccountNumber << ", " << person->Name << ", " << person->Balance << endl;
+}
+
 int main()
 {
     setlocale(LC_ALL, "Russian"); // задаём русский текст
@@ -33,5 +41,7 @@ int main()
 
     changeBankBalance(&person, newBalance);
 
-    cout << "Ваш счет: " << person.Name << ", " << person.AccountNumber << ", " << person.Balance << endl;
+    //cout << "Ваш счет: " << person.Name << ", " << person.AccountNumber << ", " << person.Balance << endl;
+    out_bank_details(&person);
+    return 0;
 }
