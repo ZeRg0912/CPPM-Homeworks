@@ -9,8 +9,8 @@ private:
     int num;
 
 public:
-    Counter (int num) {
-        this->num = num;
+    Counter (int initNum) {
+        this->num = initNum;
     }
 
     Counter()
@@ -20,16 +20,6 @@ public:
 
     int getNumber() {
         return num;
-    }
-
-    void increase()
-    {
-        this->num = num++;
-    }
-
-    void decrease()
-    {
-        this->num = num--;
     }
 
     bool setNum(int num)
@@ -43,6 +33,16 @@ public:
             return false;
         }
     }
+
+    void increase()
+    {
+        this->num = num++;
+    }
+
+    void decrease()
+    {
+        this->num = num--;
+    }
 };
 
 int main()
@@ -54,12 +54,15 @@ int main()
     char str;
     int initNumber;
     Counter first;
-   
+
     cout << "Вы хотите указать начальное значение счетчика? Введите да или нет: ";
     cin >> init;
     if (init == "да" || init == "Да" || init == "ДА") {
-        cout << "Введите начальное значение счетчика: ";
-        cin >> initNumber;
+        do {
+            cout << "Введите начальное значение счетчика: ";
+            cin >> initNumber;
+            if (typeid(initNumber).name() != "int") cout << "Неккоректное значение! попробуй снова." << endl;
+        } while (!(typeid(initNumber).name() != "int"));
         first.setNum(initNumber);
     }
 
