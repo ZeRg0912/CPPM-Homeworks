@@ -77,16 +77,37 @@ int main()
     {
         do {
             if (!result.set_num1(num1)) {
-                cout << "Введите num1: ";
-                cin >> num1;
+                do {
+                    cout << "Введите num1: ";
+                    cin >> num1;
+                    if (cin.fail()) {
+                        cout << "Введите число! попробуй снова." << endl;
+                        cin.clear();
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    }
+                    else {
+                        break;
+                    }
+                } while (!isdigit(num1));
             }
             if (!result.set_num2(num2)) {
-                cout << "Введите num2: ";
-                cin >> num2;
+                do {
+                    cout << "Введите num2: ";
+                    cin >> num2;
+                    if (cin.fail()) {
+                        cout << "Введите число! попробуй снова." << endl;
+                        cin.clear();
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    }
+                    else {
+                        break;
+                    }
+                } while (!isdigit(num2));
             }
-            if (!result.set_num1(num1) || !result.set_num2(num2)) {
-                cout << "Неверный ввод!" << "\n";
+            if ((!result.set_num1(num1)) || (!result.set_num2(num2))) {
+                cout << "Неверный ввод! num1 и num2 не должны быть равны 0!" << "\n";
             }
+
         } while (!result.set_num1(num1) && !result.set_num2(num2));
         if (result.set_num1(num1) && result.set_num2(num2)) {
             cout << "num1 + num2 = " << result.add(num1, num2) << endl;

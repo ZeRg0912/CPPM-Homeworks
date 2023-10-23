@@ -51,42 +51,64 @@ int main()
     system("chcp 1251"); // настраиваем кодировку консоли
     system("cls");
     string init;
-    char str;
+    char command;
     int initNumber;
-    Counter first;
+    Counter count;
 
-    cout << "Вы хотите указать начальное значение счетчика? Введите да или нет: ";
-    cin >> init;
-    if (init == "да" || init == "Да" || init == "ДА") {
-        do {
-            cout << "Введите начальное значение счетчика: ";
-            cin >> initNumber;
-            if (typeid(initNumber).name() != "int") cout << "Неккоректное значение! попробуй снова." << endl;
-        } while (!(typeid(initNumber).name() != "int"));
-        first.setNum(initNumber);
-    }
-
+    // Выбор начального значения пользователя или по умолчанию
+    do {
+        cout << "Вы хотите указать начальное значение счетчика? Введите да или нет: ";
+        cin >> init;
+        if (init == "да" || init == "Да" || init == "ДА") {
+            // Проверка на введенное начальное значение счетчика, пока не будет цифра
+            do {
+                cout << "Введите начальное значение счетчика: ";
+                cin >> initNumber;
+                if (cin.fail()) {
+                    cout << "Неккоректное значение! попробуй снова." << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }                
+                else {
+                    break;
+                }
+            } while (!isdigit(initNumber));
+            // Инициализируем значение пользователя
+            count.setNum(initNumber);
+        }
+        // Инициализируем значение по умолчанию = 1
+        else if (init == "нет" || init == "Нет" || init == "НЕТ") {
+        }
+        else {
+            cout << "Необходимо ввести: да или нет!" << endl;
+        }
+    } while ((init != "да" && init != "Да" && init != "ДА") && (init != "нет" && init != "Нет" && init != "НЕТ"));
+    // Ввод команды для изменения или вывода значения счетчика и проверка правильности введенной команды
     do {
         cout << "Введите команду ('+', '-', '=' или 'x'): ";
-        cin >> str;
-        if (str == '+' || str == '-' || str == '=' || str == 'х') {
-            switch (str)
+        cin >> command;
+
+        if ((command == '+' || command == '-' || command == '=' || command == 'х' || command == 'x')) {
+            switch (command)
             {
             case '-':
-                first.decrease();
+                count.decrease();
                 break;
             case '+':
-                first.increase();
+                count.increase();
                 break;
             case '=':
-                cout << first.getNumber() << endl;
+                cout << count.getNumber() << endl;
                 break;
             }
+            // Очистка ввода консоли, чтобы избежать лишних вводимых значений например ++ или ==, т.к. произойдет двойное выполнение без ввода пользователя
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
         else {
             cout << "Введена неверная команда, повторите ввод!" << endl;
         }
-    } while (str != 'х');
+    } while ((command != 'х') && (command != 'x') && (command != 'Х') && (command != 'X'));
     cout << "До свидания!" << endl;
     return 0;
 }
