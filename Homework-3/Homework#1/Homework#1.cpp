@@ -5,10 +5,11 @@ using namespace std;
 
 class Calculator
 {
-public:
-    //Calculator (double num1, double num2) {}
-
+private:
     double num1, num2;
+
+public:
+    //Calculator (double num1, double num2) {}    
 
     double add (double num1, double num2) 
     {
@@ -76,40 +77,37 @@ int main()
     while (1)
     {
         do {
-            if (!result.set_num1(num1)) {
-                do {
-                    cout << "Введите num1: ";
-                    cin >> num1;
-                    if (cin.fail()) {
-                        cout << "Введите число! попробуй снова." << endl;
-                        cin.clear();
-                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    }
-                    else {
-                        break;
-                    }
-                } while (!isdigit(num1));
-            }
-            if (!result.set_num2(num2)) {
-                do {
-                    cout << "Введите num2: ";
-                    cin >> num2;
-                    if (cin.fail()) {
-                        cout << "Введите число! попробуй снова." << endl;
-                        cin.clear();
-                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    }
-                    else {
-                        break;
-                    }
-                } while (!isdigit(num2));
-            }
-            if ((!result.set_num1(num1)) || (!result.set_num2(num2))) {
-                cout << "Неверный ввод! num1 и num2 не должны быть равны 0!" << "\n";
-            }
-
-        } while (!result.set_num1(num1) && !result.set_num2(num2));
-        if (result.set_num1(num1) && result.set_num2(num2)) {
+            do {
+                cout << "Введите num1: ";
+                cin >> num1;
+                if (cin.fail()) {
+                    cout << "Введите число! попробуй снова." << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
+                else if (num1 == 0) {
+                    cout << "Неверный ввод! num1 не должно быть равно 0!" << "\n";
+                }
+                else {
+                    break;
+                }
+            } while (!isdigit(num1) || num1 == 0);
+            do {
+                cout << "Введите num2: ";
+                cin >> num2;
+                if (cin.fail()) {
+                    cout << "Введите число! попробуй снова." << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
+                else if (num2 == 0) {
+                    cout << "Неверный ввод! num2 не должно быть равно 0!" << "\n";
+                }
+                else {
+                    break;
+                }
+            } while (!isdigit(num2) || num2 == 0);
+        } while (!result.set_num1(num1) || !result.set_num2(num2));
             cout << "num1 + num2 = " << result.add(num1, num2) << endl;
             cout << "num1 - num2 = " << result.subtract_1_2(num1, num2) << endl;
             cout << "num2 - num1 = " << result.subtract_2_1(num1, num2) << endl;
@@ -118,7 +116,6 @@ int main()
             cout << "num2 / num1 = " << result.divide_2_1(num1, num2) << "\n\n";
             num1 = 0;
             num2 = 0;
-        }
     }
     return 0;
 }

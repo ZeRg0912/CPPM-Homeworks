@@ -9,39 +9,27 @@ private:
     int num;
 
 public:
-    Counter (int initNum) {
-        this->num = initNum;
-    }
-
-    Counter()
-    {
-        num = 1;
+    Counter (int initNum, bool check) {
+        if (check) {
+            this->num = initNum;
+        }
+        else {
+            this->num = 1;
+        }
     }
 
     int getNumber() {
         return num;
     }
 
-    bool setNum(int num)
-    {
-        if (sizeof(num) == sizeof(int))
-        {
-            this->num = num;
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
     void increase()
     {
-        this->num = num++;
+        this->num++;
     }
 
     void decrease()
     {
-        this->num = num--;
+        this->num--;
     }
 };
 
@@ -51,9 +39,9 @@ int main()
     system("chcp 1251"); // настраиваем кодировку консоли
     system("cls");
     string init;
+    bool checkInit = false;
     char command;
-    int initNumber;
-    Counter count;
+    int initNumber = 0;
 
     // Выбор начального значения пользователя или по умолчанию
     do {
@@ -74,15 +62,19 @@ int main()
                 }
             } while (!isdigit(initNumber));
             // Инициализируем значение пользователя
-            count.setNum(initNumber);
+            checkInit = true;
         }
         // Инициализируем значение по умолчанию = 1
         else if (init == "нет" || init == "Нет" || init == "НЕТ") {
+            checkInit = false;
         }
         else {
             cout << "Необходимо ввести: да или нет!" << endl;
         }
     } while ((init != "да" && init != "Да" && init != "ДА") && (init != "нет" && init != "Нет" && init != "НЕТ"));
+    // Инициализация счетчика
+    Counter count(initNumber, checkInit);
+
     // Ввод команды для изменения или вывода значения счетчика и проверка правильности введенной команды
     do {
         cout << "Введите команду ('+', '-', '=' или 'x'): ";
