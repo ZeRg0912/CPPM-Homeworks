@@ -9,7 +9,8 @@ private:
     double num1, num2;
 
 public:
-    //Calculator (double num1, double num2) {}    
+    //Calculator (double num1, double num2) {} 
+    Calculator() {}
 
     double add (double num1, double num2) 
     {
