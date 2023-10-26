@@ -28,7 +28,7 @@ public:
 	string getOutputAdress() {
 		return City + ", " + Street + ", " + to_string(numHouse) + ", " + to_string(numFlat) + "\n";
 	}
-
+private:
 	int partition(Adress* array, int start, int end)
 	{
 		string ref = array[end].City;
@@ -45,6 +45,7 @@ public:
 		swap(array[startIndex], array[end]);
 		return startIndex;
 	}
+public:
 	void sortAdress(Adress* array, int start, int end)
 	{
 		if (start >= end) {
