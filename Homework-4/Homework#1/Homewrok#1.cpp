@@ -87,10 +87,12 @@ int main()
 		else {
 			cout << "Невозможно открыть файл для записи!\n";
 		}
+		write.close();
 		delete[] arrAdress;
 	}
 	else {
 		cout << "Невозможно открыть файл для чтения!\n";
 	}
+	read.close();
 	return 0;
 }
