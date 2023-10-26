@@ -82,8 +82,8 @@ public:
 
 int main()
 {
-	setlocale(LC_ALL, "Russian"); // задаём русский текст
-	system("chcp 1251"); // настраиваем кодировку консоли
+	setlocale(LC_ALL, "Russian");
+	system("chcp 1251");
 	system("cls");
 
 	string str;
@@ -116,10 +116,12 @@ int main()
 		else {
 			cout << "Невозможно открыть файл для записи!\n";
 		}
+		write.close();
 		delete[] arrAdress;
 	}
 	else {
 		cout << "Невозможно открыть файл для чтения!\n";
 	}
+	read.close();
 	return 0;
 }
