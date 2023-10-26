@@ -29,22 +29,6 @@ public:
 		cout << "Город: " << City << ", Улица: " << Street << ", Дом: " << numHouse << ", Квартира: " << numFlat << endl;
 	}
 
-	string getAdressCity() {
-		return this->City;
-	}
-
-	string getAdressStreet() {
-		return this->Street;
-	}
-
-	int getAdressHouse() {
-		return this->numHouse;
-	}
-
-	int getAdressFlat() {
-		return this->numFlat;
-	}
-
 	string getOutputAdress() {
 		return City + ", " + Street + ", " + to_string(numHouse) + ", " + to_string(numFlat) + "\n";
 	}
@@ -80,7 +64,6 @@ int main()
 		if (write.is_open()) {
 			write << numAdresses << endl;
 			for (int i = numAdresses - 1; i >= 0; i--) {
-				//write << arrAdress[i].getAdressCity() << ", " << arrAdress[i].getAdressStreet() << ", " << arrAdress[i].getAdressHouse() << ", " << arrAdress[i].getAdressFlat() << endl;
 				write << arrAdress[i].getOutputAdress();
 			}
 		}
