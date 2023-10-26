@@ -9,13 +9,11 @@ private:
     int num;
 
 public:
-    Counter (int initNum, bool check) {
-        if (check) {
-            this->num = initNum;
-        }
-        else {
-            this->num = 1;
-        }
+    Counter() {
+        this->num = 1;
+    }
+    Counter (int initNum) {
+        this->num = initNum;
     }
 
     int getNumber() {
@@ -73,7 +71,10 @@ int main()
         }
     } while ((init != "да" && init != "Да" && init != "ДА") && (init != "нет" && init != "Нет" && init != "НЕТ"));
     // Инициализация счетчика
-    Counter count(initNumber, checkInit);
+    Counter count;
+    if (checkInit) {
+        count = Counter(initNumber);
+    }
 
     // Ввод команды для изменения или вывода значения счетчика и проверка правильности введенной команды
     do {
