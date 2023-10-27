@@ -31,12 +31,18 @@ public:
 private:
 	int partition(Adress* array, int start, int end)
 	{
-		string ref = array[end].City;
+		string refCity = array[end].City;
+		string refStreet = array[end].Street;
 		int startIndex = start;
 
 		for (int i = start; i < end; i++)
 		{
-			if (array[i].City[0] <= ref[0])
+			if (array[i].City[0] < refCity[0])
+			{
+				swap(array[i], array[startIndex]);
+				startIndex++;
+			}
+			else if (array[i].City[0] == refCity[0] && array[i].Street[0] <= refStreet[0])
 			{
 				swap(array[i], array[startIndex]);
 				startIndex++;
@@ -45,6 +51,7 @@ private:
 		swap(array[startIndex], array[end]);
 		return startIndex;
 	}
+
 public:
 	void sortAdress(Adress* array, int start, int end)
 	{
