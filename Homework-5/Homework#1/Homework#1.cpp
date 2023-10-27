@@ -8,12 +8,13 @@ protected:
     int sideCounts = 0;
     string Name;
 
-public:
-    figure() : figure("Фигура" , 0) {};
     figure(string FigName, int Sides) {
         this->Name = FigName;
         this->sideCounts = Sides;
     }
+
+public:
+    figure() : figure("Фигура" , 0) {};
 
     string getName() { 
         return Name; 
