@@ -6,23 +6,32 @@ using namespace std;
 class figure {
 protected:
     string Name = "Фигура";
+    int numOfSides = 0;
     // Стороны
     int sideLengthA = 0;
     int sideLengthB = 0;
     int sideLengthC = 0;
-    int sideLengthD = 0;
+    int sideLengthD = 0;    
     // Углы
     int angleA = 0;
     int angleB = 0;
     int angleC = 0;
     int angleD = 0;
-    // Проверка на 3 или 4 стороны
-    bool fourSides = false;
+
+    virtual bool checkFigure() {
+        if (numOfSides == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
 public:
     string getName() {
         return Name;
     }
+
 
     int getSideA() {
         return sideLengthA;
@@ -40,6 +49,7 @@ public:
         return sideLengthD;
     }
 
+
     int getAngleA() {
         return angleA;
     }
@@ -56,16 +66,33 @@ public:
         return angleD;
     }
 
-    bool checkSides() {
-        return fourSides;
+    virtual void print_info() {
+        cout << endl;
+        cout << Name << ": " << endl;
+        if (checkFigure()) {
+            cout << "Правильная" << endl;
+        }
+        else {
+            cout << "Неправильная" << endl;
+        }
+        cout << "Количество сторон: " << numOfSides << endl;
     }
 };
 
 class triangle : public figure {
+protected:
+    bool checkFigure() override {
+        if ((angleA + angleB + angleC) == 180) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 public:
     triangle(int _sideLengthA, int _sideLengthB, int _sideLengthC, int _angleA, int _angleB, int _angleC) {
         this->Name = "Треугольник";
-        fourSides = false;
+        this->numOfSides = 3;
         this->sideLengthA = _sideLengthA;
         this->sideLengthB = _sideLengthB;
         this->sideLengthC = _sideLengthC;
@@ -73,10 +100,25 @@ public:
         this->angleB = _angleB;
         this->angleC = _angleC;
     };
+
+    void print_info() override {
+        figure::print_info();
+        cout << "Стороны: a = " << getSideA() << ", b = " << getSideB() << ", c = " << getSideC() << endl;
+        cout << "Углы: A = " << getAngleA() << ", B = " << getAngleB() << ", C = " << getAngleC() << endl;
+    }
 };
 
 class rectangularTriangle : public triangle {
-public: 
+protected:
+    bool checkFigure() override {
+        if ((triangle::checkFigure()) && (angleC == 90)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+public:
     rectangularTriangle(int _sideLengthA, int _sideLengthB, int _sideLengthC, int _angleA, int _angleB) : triangle(_sideLengthA, _sideLengthB, _sideLengthC, _angleA, _angleB, 90) {
         this->Name = "Прямоугольный треугольник";
     };
@@ -100,7 +142,7 @@ class quadrangle : public figure {
 public:
     quadrangle(int _sideLengthA, int _sideLengthB, int _sideLengthC, int _sideLengthD, int _angleA, int _angleB, int _angleC, int _angleD) {
         this->Name = "Четырехугольник";
-        fourSides = true;
+        this->numOfSides = 3;
         this->sideLengthA = _sideLengthA;
         this->sideLengthB = _sideLengthB;
         this->sideLengthC = _sideLengthC;
@@ -140,52 +182,23 @@ public:
     };
 };
 
-void print_info (figure &figureType) {
-    cout << figureType.getName() << ": " << endl;
-    cout << "Стороны: a = " << figureType.getSideA() << ", b = " << figureType.getSideB() << ", c = " << figureType.getSideC();
-    if (figureType.checkSides()) {
-        cout << ", d = " << figureType.getSideD() << endl;
-    }
-    else {
-        cout << endl;
-    }
-    cout << "Углы: A = " << figureType.getAngleA() << ", B = " << figureType.getAngleB() << ", C = " << figureType.getAngleC();
-    if (figureType.checkSides()) {
-        cout << ", D = " << figureType.getAngleD() << endl;
-    }
-    else {
-        cout << endl;
-    }
-    cout << endl;
-}
-
 int main()
 {
     setlocale(LC_ALL, "Russian");
     system("chcp 1251");
     system("cls");
 
-    triangle Triangle1(10, 20, 30, 50, 60 ,70);
+    figure Figure1;
+    Figure1.print_info();
+
+    triangle Triangle1(10, 20, 30, 50, 60, 70);
+    Triangle1.print_info();
+
     rectangularTriangle RectangularTriangle1(10, 20, 30, 50, 60);
-    isoscelesTriangle IsoscelesTriangle1(10, 20, 50, 60);
-    equilateralTriangle EquilateralTriangle1(30);
-        
-    quadrangle Quadrangle1(10, 20, 30, 40, 50, 60, 70, 80);
-    rectangle Rectangle1(10, 20);
-    square Square1(20);
-    parallelogram Parallelogram1(20, 30, 30, 40);
-    rhomb Rhomb1(30, 30, 40);
+    RectangularTriangle1.print_info();
 
-    print_info(Triangle1);
-    print_info(RectangularTriangle1);
-    print_info(IsoscelesTriangle1);
-    print_info(EquilateralTriangle1);
-
-    print_info(Quadrangle1);
-    print_info(Rectangle1);
-    print_info(Square1);
-    print_info(Parallelogram1);
-    print_info(Rhomb1);    
+    rectangularTriangle RectangularTriangle2(10, 20, 30, 45, 45);
+    RectangularTriangle2.print_info();
 
     return 0;
 }
