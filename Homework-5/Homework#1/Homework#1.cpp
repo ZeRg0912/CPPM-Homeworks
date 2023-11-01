@@ -44,6 +44,7 @@ int main()
     setlocale(LC_ALL, "Russian");
     system("chcp 1251");
     system("cls");
+
     figure fig1;
     triangle fig2;
     quadrangle fig3;
