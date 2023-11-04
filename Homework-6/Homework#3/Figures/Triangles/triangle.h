@@ -1,5 +1,5 @@
 #pragma once
-#include "figure.h"
+#include "../figure.h"
 
 class triangle : public figure {
 public:

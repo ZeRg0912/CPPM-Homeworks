@@ -13,78 +13,96 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\Figures">
+      <UniqueIdentifier>{634de936-9b40-4a4b-9d9c-2e82ddc5e94a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Figures\Triangles">
+      <UniqueIdentifier>{af1fa775-fc59-4a9c-8b59-c8a43b650d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Figures\Quadrangles">
+      <UniqueIdentifier>{d914663e-09f7-48b1-ac64-4eec9ec9d782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Figures">
+      <UniqueIdentifier>{0d4cc25f-e93b-4ba5-adcd-80ca381fb955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Figures\Triangles">
+      <UniqueIdentifier>{f8e03eb1-0755-43a2-851b-7228d591791d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Figures\Quadrangles">
+      <UniqueIdentifier>{2500b0d8-7e11-4ea3-ba59-83e002cf6347}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Homework#3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="figure.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="triangle.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="rectangularTriangle.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="print_info.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="isoscelesTriangle.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Figures\Quadrangles\parallelogram.cpp">
+      <Filter>Исходные файлы\Figures\Quadrangles</Filter>
     </ClCompile>
-    <ClCompile Include="equilateralTriangle.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Figures\Quadrangles\quadrangle.cpp">
+      <Filter>Исходные файлы\Figures\Quadrangles</Filter>
     </ClCompile>
-    <ClCompile Include="quadrangle.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Figures\Quadrangles\rectangle.cpp">
+      <Filter>Исходные файлы\Figures\Quadrangles</Filter>
     </ClCompile>
-    <ClCompile Include="rectangle.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Figures\Quadrangles\rhomb.cpp">
+      <Filter>Исходные файлы\Figures\Quadrangles</Filter>
     </ClCompile>
-    <ClCompile Include="square.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Figures\Quadrangles\square.cpp">
+      <Filter>Исходные файлы\Figures\Quadrangles</Filter>
     </ClCompile>
-    <ClCompile Include="parallelogram.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Figures\Triangles\equilateralTriangle.cpp">
+      <Filter>Исходные файлы\Figures\Triangles</Filter>
     </ClCompile>
-    <ClCompile Include="rhomb.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Figures\Triangles\isoscelesTriangle.cpp">
+      <Filter>Исходные файлы\Figures\Triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Triangles\rectangularTriangle.cpp">
+      <Filter>Исходные файлы\Figures\Triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Triangles\triangle.cpp">
+      <Filter>Исходные файлы\Figures\Triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\figure.cpp">
+      <Filter>Исходные файлы\Figures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="figure.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="triangle.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="rectangularTriangle.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="print_info.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="isoscelesTriangle.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Figures\Quadrangles\parallelogram.h">
+      <Filter>Файлы заголовков\Figures\Quadrangles</Filter>
     </ClInclude>
-    <ClInclude Include="equilateralTriangle.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Figures\Quadrangles\quadrangle.h">
+      <Filter>Файлы заголовков\Figures\Quadrangles</Filter>
     </ClInclude>
-    <ClInclude Include="quadrangle.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Figures\Quadrangles\rectangle.h">
+      <Filter>Файлы заголовков\Figures\Quadrangles</Filter>
     </ClInclude>
-    <ClInclude Include="rectangle.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Figures\Quadrangles\rhomb.h">
+      <Filter>Файлы заголовков\Figures\Quadrangles</Filter>
     </ClInclude>
-    <ClInclude Include="square.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Figures\Quadrangles\square.h">
+      <Filter>Файлы заголовков\Figures\Quadrangles</Filter>
     </ClInclude>
-    <ClInclude Include="parallelogram.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Figures\Triangles\equilateralTriangle.h">
+      <Filter>Файлы заголовков\Figures\Triangles</Filter>
     </ClInclude>
-    <ClInclude Include="rhomb.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="Figures\Triangles\isoscelesTriangle.h">
+      <Filter>Файлы заголовков\Figures\Triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Triangles\rectangularTriangle.h">
+      <Filter>Файлы заголовков\Figures\Triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Triangles\triangle.h">
+      <Filter>Файлы заголовков\Figures\Triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\figure.h">
+      <Filter>Файлы заголовков\Figures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

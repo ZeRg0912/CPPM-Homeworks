@@ -127,31 +127,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="equilateralTriangle.cpp" />
-    <ClCompile Include="figure.cpp" />
+    <ClCompile Include="Figures\figure.cpp" />
+    <ClCompile Include="Figures\Quadrangles\parallelogram.cpp" />
+    <ClCompile Include="Figures\Quadrangles\quadrangle.cpp" />
+    <ClCompile Include="Figures\Quadrangles\rectangle.cpp" />
+    <ClCompile Include="Figures\Quadrangles\rhomb.cpp" />
+    <ClCompile Include="Figures\Quadrangles\square.cpp" />
+    <ClCompile Include="Figures\Triangles\equilateralTriangle.cpp" />
+    <ClCompile Include="Figures\Triangles\isoscelesTriangle.cpp" />
+    <ClCompile Include="Figures\Triangles\rectangularTriangle.cpp" />
+    <ClCompile Include="Figures\Triangles\triangle.cpp" />
     <ClCompile Include="Homework#3.cpp" />
-    <ClCompile Include="isoscelesTriangle.cpp" />
-    <ClCompile Include="parallelogram.cpp" />
     <ClCompile Include="print_info.cpp" />
-    <ClCompile Include="quadrangle.cpp" />
-    <ClCompile Include="rectangle.cpp" />
-    <ClCompile Include="rectangularTriangle.cpp" />
-    <ClCompile Include="rhomb.cpp" />
-    <ClCompile Include="square.cpp" />
-    <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="equilateralTriangle.h" />
-    <ClInclude Include="figure.h" />
-    <ClInclude Include="isoscelesTriangle.h" />
-    <ClInclude Include="parallelogram.h" />
+    <ClInclude Include="Figures\figure.h" />
+    <ClInclude Include="Figures\Quadrangles\parallelogram.h" />
+    <ClInclude Include="Figures\Quadrangles\quadrangle.h" />
+    <ClInclude Include="Figures\Quadrangles\rectangle.h" />
+    <ClInclude Include="Figures\Quadrangles\rhomb.h" />
+    <ClInclude Include="Figures\Quadrangles\square.h" />
+    <ClInclude Include="Figures\Triangles\equilateralTriangle.h" />
+    <ClInclude Include="Figures\Triangles\isoscelesTriangle.h" />
+    <ClInclude Include="Figures\Triangles\rectangularTriangle.h" />
+    <ClInclude Include="Figures\Triangles\triangle.h" />
     <ClInclude Include="print_info.h" />
-    <ClInclude Include="quadrangle.h" />
-    <ClInclude Include="rectangle.h" />
-    <ClInclude Include="rectangularTriangle.h" />
-    <ClInclude Include="rhomb.h" />
-    <ClInclude Include="square.h" />
-    <ClInclude Include="triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
