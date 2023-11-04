@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Figures\figure.cpp" />
+    <ClCompile Include="Figures\print_info.cpp" />
     <ClCompile Include="Figures\Quadrangles\parallelogram.cpp" />
     <ClCompile Include="Figures\Quadrangles\quadrangle.cpp" />
     <ClCompile Include="Figures\Quadrangles\rectangle.cpp" />
@@ -138,10 +139,10 @@
     <ClCompile Include="Figures\Triangles\rectangularTriangle.cpp" />
     <ClCompile Include="Figures\Triangles\triangle.cpp" />
     <ClCompile Include="Homework#3.cpp" />
-    <ClCompile Include="print_info.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Figures\figure.h" />
+    <ClInclude Include="Figures\print_info.h" />
     <ClInclude Include="Figures\Quadrangles\parallelogram.h" />
     <ClInclude Include="Figures\Quadrangles\quadrangle.h" />
     <ClInclude Include="Figures\Quadrangles\rectangle.h" />
@@ -151,7 +152,6 @@
     <ClInclude Include="Figures\Triangles\isoscelesTriangle.h" />
     <ClInclude Include="Figures\Triangles\rectangularTriangle.h" />
     <ClInclude Include="Figures\Triangles\triangle.h" />
-    <ClInclude Include="print_info.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

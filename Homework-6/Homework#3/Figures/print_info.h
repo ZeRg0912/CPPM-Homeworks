@@ -1,4 +1,4 @@
 #pragma once
-#include "Figures/figure.h"
+#include "figure.h"
 
 void print_info(figure& figureType);

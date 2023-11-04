@@ -36,9 +36,6 @@
     <ClCompile Include="Homework#3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="print_info.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Figures\Quadrangles\parallelogram.cpp">
       <Filter>Исходные файлы\Figures\Quadrangles</Filter>
     </ClCompile>
@@ -69,11 +66,11 @@
     <ClCompile Include="Figures\figure.cpp">
       <Filter>Исходные файлы\Figures</Filter>
     </ClCompile>
+    <ClCompile Include="Figures\print_info.cpp">
+      <Filter>Исходные файлы\Figures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="print_info.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Figures\Quadrangles\parallelogram.h">
       <Filter>Файлы заголовков\Figures\Quadrangles</Filter>
     </ClInclude>
@@ -102,6 +99,9 @@
       <Filter>Файлы заголовков\Figures\Triangles</Filter>
     </ClInclude>
     <ClInclude Include="Figures\figure.h">
+      <Filter>Файлы заголовков\Figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\print_info.h">
       <Filter>Файлы заголовков\Figures</Filter>
     </ClInclude>
   </ItemGroup>

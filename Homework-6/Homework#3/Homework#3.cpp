@@ -10,7 +10,7 @@
 #include "Figures/Quadrangles/parallelogram.h"
 #include "Figures/Quadrangles/rhomb.h"
 
-#include "print_info.h"
+#include "Figures/print_info.h"
 
 using namespace std;
 
