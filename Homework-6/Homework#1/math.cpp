@@ -1,40 +1,22 @@
 #include "math.h"
 
-int sum(int x, int y) {
+float sum(float x, float y) {
 	return x + y;
 }
-int sub(int x, int y) {
+float sub(float x, float y) {
 	return x - y;
 }
-int mult(int x, int y) {
+float mult(float x, float y) {
 	return x * y;
 }
-int divide(int x, int y) {
+float divide(float x, float y) {
 	return x / y;
 }
 
-int power(int x, int y) {
-	return x^y;
-}
-
-int choiseOperation(int choise, int x, int y) {
-	switch (choise) {
-	case 1:
-		return sum(x, y);
-		break;
-	case 2:
-		return sub(x, y);
-		break;
-	case 3:
-		return mult(x, y);
-		break;
-	case 4:
-		return divide(x, y);
-		break;
-	case 5:
-		return power(x, y);
-		break;
-	default:
-		break;
+float power(float x, float y) {
+	float a = 1;
+	for (float i = y; i > 0; i--) {
+		a = a * x;
 	}
+	return a;
 }

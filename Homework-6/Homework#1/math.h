@@ -1,9 +1,7 @@
 #pragma once
 
-int sum(int, int);
-int sub(int, int);
-int mult(int, int);
-int divide(int, int);
-int power(int, int);
-
-int choiseOperation(int, int, int);
+float sum(float, float);
+float sub(float, float);
+float mult(float, float);
+float divide(float, float);
+float power(float, float);
