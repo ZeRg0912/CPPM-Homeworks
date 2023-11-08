@@ -10,7 +10,7 @@ int main()
     system("chcp 1251");
     system("cls");
 #if !defined MODE
-#error "Необходимо определить MODE"
+#error Необходимо определить MODE
 #elif (MODE == 0)
     cout << "Работаю в режиме тренировки" << endl;
 #elif (MODE == 1)
@@ -24,7 +24,7 @@ int main()
     cout << "Результат сложения: " << add(x, y);
     cout << endl;
 #else 
-    cout << "Неизвестный режим. Завершение работы";
+    cout << "Неизвестный режим. Завершение работы" << endl;
 #endif
     return 0;
 }

@@ -2,7 +2,7 @@
 
 #define SUB(a, b) ((a) - (b))
 
-int main(int argc, char** argv)
+int main()
 {
 	setlocale(LC_ALL, "Russian");
 	system("chcp 1251");
