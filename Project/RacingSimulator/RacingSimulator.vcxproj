@@ -127,17 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AIR.cpp" />
-    <ClCompile Include="CAMEL.cpp" />
-    <ClCompile Include="GROUND.cpp" />
     <ClCompile Include="RacingSimulator.cpp" />
-    <ClCompile Include="TRANSPORT.cpp" />
+    <ClCompile Include="Transports\Flying\AIR.cpp" />
+    <ClCompile Include="Transports\Ground\CAMEL.cpp" />
+    <ClCompile Include="Transports\Ground\GROUND.cpp" />
+    <ClCompile Include="Transports\TRANSPORT.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AIR.h" />
-    <ClInclude Include="CAMEL.h" />
-    <ClInclude Include="GROUND.h" />
-    <ClInclude Include="TRANSPORT.h" />
+    <ClInclude Include="Transports\Flying\AIR.h" />
+    <ClInclude Include="Transports\Ground\CAMEL.h" />
+    <ClInclude Include="Transports\Ground\GROUND.h" />
+    <ClInclude Include="Transports\TRANSPORT.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
