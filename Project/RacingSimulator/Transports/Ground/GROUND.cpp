@@ -14,6 +14,6 @@ GROUND::GROUND() {
 	this->quantityOfRests = 0;
 }
 
-float GROUND::time(float _distance) {
+float GROUND::timeRace(float _distance) {
 	return distanceTime = _distance / speed;
 };

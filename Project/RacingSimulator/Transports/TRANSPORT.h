@@ -19,5 +19,5 @@ public:
 	int getRestTime();
 	int checkQuantityOfRests();
 
-	virtual float time(float _distance);
+	virtual float timeRace(float _distance);
 };

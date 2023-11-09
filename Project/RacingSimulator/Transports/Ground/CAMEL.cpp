@@ -12,30 +12,21 @@ CAMEL::CAMEL() : GROUND() {
 	this->quantityOfRests = 2;
 };
 
-float CAMEL::time(float _distance) {
+float CAMEL::timeRace(float _distance) {
 	float timeRace = 0;
-	float remains = 0;
 	int rest = 0;
-	int distanceRest = speed * wayToRest;
-	int stops = _distance / distanceRest;
-	if (_distance != stops * distanceRest) {
-		remains = _distance - stops * distanceRest;
-	}
-	if (stops > 1) {
-		rest = restTime + (stops - 2) * 8;
-	}
-	else if (stops == 1) {
-		rest = restTime;
-	}
-
-	int move = stops * wayToRest;
-
-	if (remains != 0) {
-		float lastPush = remains / speed;
-		timeRace = rest + move + lastPush;
-	}
-	else {
-		timeRace = rest + move;
-	}
+	int stops = _distance / wayToRest;
+	do {
+		if (stops > 1) {
+			rest += restTime + 3;
+			stops--;
+		}
+		else if (stops == 1) {
+			rest += restTime;
+			stops--;
+		}
+	} while (stops != 0);
+	float move = _distance / speed;
+	timeRace = rest + move;
 	return timeRace;
 };
