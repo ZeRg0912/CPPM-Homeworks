@@ -4,11 +4,13 @@
 class TRANSPORT {
 protected:
 	std::string name = "Транспорт";
-	int speed = 0;
+	int speed = 1;
 	int wayToRest = 0;
 	int restTime = 0;
 	int quantityOfRests = 0;
 	int distanceReduction = 0;
+
+	float distanceTime = 0;
 
 public:
 	std::string getName();
@@ -16,4 +18,6 @@ public:
 	int getWayToRest();
 	int getRestTime();
 	int checkQuantityOfRests();
+
+	virtual float time(float _distance);
 };

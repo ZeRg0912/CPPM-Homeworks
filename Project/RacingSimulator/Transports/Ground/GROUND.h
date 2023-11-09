@@ -3,5 +3,8 @@
 
 class GROUND : public TRANSPORT {
 public:
+	GROUND();
+	float time(float _distance) override;
+protected:
 	GROUND(int _speed, int _wayToRest, int _restTime, int _quantityOfRests);
 };

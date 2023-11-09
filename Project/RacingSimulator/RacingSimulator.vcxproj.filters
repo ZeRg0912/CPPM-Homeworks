@@ -48,6 +48,24 @@
     <ClCompile Include="Transports\Ground\GROUND.cpp">
       <Filter>Исходные файлы\Transports\Ground</Filter>
     </ClCompile>
+    <ClCompile Include="Transports\Ground\FAST_CAMEL.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Ground\CENTAUR.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Ground\ALL_TERRAIN_BOOTS.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Flying\MAGIC_CARPET.cpp">
+      <Filter>Исходные файлы\Transports\Flying</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Flying\EAGLE.cpp">
+      <Filter>Исходные файлы\Transports\Flying</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Flying\BROOMSTICK.cpp">
+      <Filter>Исходные файлы\Transports\Flying</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Transports\TRANSPORT.h">
@@ -56,10 +74,31 @@
     <ClInclude Include="Transports\Ground\CAMEL.h">
       <Filter>Файлы заголовков\Transports\Ground</Filter>
     </ClInclude>
+    <ClInclude Include="Transports\Flying\AIR.h">
+      <Filter>Файлы заголовков\Transports\FLying</Filter>
+    </ClInclude>
     <ClInclude Include="Transports\Ground\GROUND.h">
       <Filter>Файлы заголовков\Transports\Ground</Filter>
     </ClInclude>
-    <ClInclude Include="Transports\Flying\AIR.h">
+    <ClInclude Include="Transports\Ground\FAST_CAMEL.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Ground\CENTAUR.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="RacingSimulator.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Ground\ALL_TERRAIN_BOOTS.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Flying\MAGIC_CARPET.h">
+      <Filter>Файлы заголовков\Transports\FLying</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Flying\EAGLE.h">
+      <Filter>Файлы заголовков\Transports\FLying</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Flying\BROOMSTICK.h">
       <Filter>Файлы заголовков\Transports\FLying</Filter>
     </ClInclude>
   </ItemGroup>

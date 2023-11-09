@@ -1,5 +1,4 @@
-﻿#include <iostream>
-#include "Transports/Ground/CAMEL.h"
+﻿#include "RacingSimulator.h"
 
 using namespace std;
 
@@ -9,9 +8,11 @@ int main()
     system("chcp 1251");
     system("cls");
 
-    CAMEL camel1(10, 30, 5, 2);
+    CAMEL camel1;
+    GROUND ground1;
 
-    cout << camel1.getName();
+    cout << ground1.getName() << " : " << ground1.time(100) << endl;
+    cout << camel1.getName() << " : " << camel1.time(1000) << endl;
 
     return 0;
 }

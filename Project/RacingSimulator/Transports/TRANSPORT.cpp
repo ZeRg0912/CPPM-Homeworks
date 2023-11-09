@@ -19,3 +19,7 @@ int TRANSPORT::getRestTime() {
 int TRANSPORT::checkQuantityOfRests() {
 	return quantityOfRests;
 }
+
+float TRANSPORT::time(float _distance) {
+	return distanceTime = _distance / speed;
+}
