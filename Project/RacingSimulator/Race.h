@@ -12,4 +12,5 @@
 #include "Transports/Flying/EAGLE.h"
 #include "Transports/Flying/BROOMSTICK.h"
 
-int race();
+void insertionSort(std::vector<TRANSPORT*>& arr);
+void RACE(int distance);
