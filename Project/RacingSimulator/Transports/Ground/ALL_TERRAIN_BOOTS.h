@@ -4,6 +4,7 @@
 class BOOTS : public GROUND {
 public:
 	BOOTS();
+	float timeRace(float _distance) override;
 protected:
 	BOOTS(int _speed, int _wayToRest, int _restTime, int _quantityOfRests);
 };

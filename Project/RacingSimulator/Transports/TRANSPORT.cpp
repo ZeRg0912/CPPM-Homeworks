@@ -20,6 +20,10 @@ int TRANSPORT::checkQuantityOfRests() {
 	return quantityOfRests;
 }
 
+int TRANSPORT::getDistanceReduction() {
+	return distanceReduction;
+}
+
 float TRANSPORT::timeRace(float _distance) {
 	return distanceTime = _distance / speed;
 }

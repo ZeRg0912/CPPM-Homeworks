@@ -11,3 +11,22 @@ BOOTS::BOOTS() : GROUND() {
 	this->restTime = 10;
 	this->quantityOfRests = 2;
 };
+
+float BOOTS::timeRace(float _distance) {
+	float timeRace = 0;
+	float rest = 0;
+	int stops = _distance / wayToRest;
+	do {
+		if (stops > 1) {
+			rest += restTime - 5;
+			stops--;
+		}
+		else if (stops == 1) {
+			rest += restTime;
+			stops--;
+		}
+	} while (stops != 0);
+	float move = _distance / speed;
+	timeRace = rest + move;
+	return timeRace;
+};

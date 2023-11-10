@@ -14,7 +14,7 @@ CAMEL::CAMEL() : GROUND() {
 
 float CAMEL::timeRace(float _distance) {
 	float timeRace = 0;
-	int rest = 0;
+	float rest = 0;
 	int stops = _distance / wayToRest;
 	do {
 		if (stops > 1) {

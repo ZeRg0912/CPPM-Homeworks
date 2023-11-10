@@ -7,5 +7,9 @@ AIR::AIR(int _speed, int _distanceReduction) {
 
 AIR::AIR() {
 	this->speed = 0;
-	this->distanceReduction = 0;
+	this->distanceReduction = 1;
 }
+
+float AIR::timeRace(float _distance) {
+	return distanceTime = _distance / speed;
+};

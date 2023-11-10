@@ -8,7 +8,7 @@ protected:
 	int wayToRest = 0;
 	int restTime = 0;
 	int quantityOfRests = 0;
-	int distanceReduction = 0;
+	float distanceReduction = 0;
 
 	float distanceTime = 0;
 
@@ -18,6 +18,7 @@ public:
 	int getWayToRest();
 	int getRestTime();
 	int checkQuantityOfRests();
+	int getDistanceReduction();
 
 	virtual float timeRace(float _distance);
 };

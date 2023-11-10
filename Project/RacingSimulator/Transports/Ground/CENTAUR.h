@@ -4,6 +4,7 @@
 class CENTAUR : public GROUND {
 public:
 	CENTAUR();
+	float timeRace(float _distance) override;
 protected:
 	CENTAUR(int _speed, int _wayToRest, int _restTime, int _quantityOfRests);
 };
