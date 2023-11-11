@@ -37,9 +37,9 @@ void RACE(int distance) {
 
 	insertionSort(arr, distance);
 	
-	std::cout << "Длина маршрута: " << distance << std::endl;
+	std::cout << "Длина маршрута: " << distance << " км." << std::endl;
 	std::cout << "Время прохождения маршрута: " << std::endl;
 	for (const auto& obj : arr) {		
-		std::cout << obj->getName() << " : " << obj->timeRace(distance) << std::endl;
+		std::cout << obj->getName() << " : " << obj->timeRace(distance) << " часов." << std::endl;
 	}
 }

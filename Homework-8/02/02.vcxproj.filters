@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\figures">
+      <UniqueIdentifier>{d5ff12d4-3e3f-4011-9c3b-bca624ed6f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\figures\Quadrangles">
+      <UniqueIdentifier>{bf17da40-f7fa-4b56-8812-30286aae9c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\figures\Triangles">
+      <UniqueIdentifier>{65f34a94-597a-49b8-a895-488f4c84c591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\figures">
+      <UniqueIdentifier>{257daf07-526d-47bf-9904-d39bfe6659df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\figures\Quadrangles">
+      <UniqueIdentifier>{a652dc4a-364d-406b-829f-3edf0a0b65d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\figures\Triangles">
+      <UniqueIdentifier>{e12741de-f3b6-4cfe-a246-f1484640cf68}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="02.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\figure.cpp">
+      <Filter>Исходные файлы\figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\print_info.cpp">
+      <Filter>Исходные файлы\figures</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Triangles\equilateralTriangle.cpp">
+      <Filter>Исходные файлы\figures\Triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Triangles\isoscelesTriangle.cpp">
+      <Filter>Исходные файлы\figures\Triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Triangles\rectangularTriangle.cpp">
+      <Filter>Исходные файлы\figures\Triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Triangles\triangle.cpp">
+      <Filter>Исходные файлы\figures\Triangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Quadrangles\parallelogram.cpp">
+      <Filter>Исходные файлы\figures\Quadrangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Quadrangles\quadrangle.cpp">
+      <Filter>Исходные файлы\figures\Quadrangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Quadrangles\rectangle.cpp">
+      <Filter>Исходные файлы\figures\Quadrangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Quadrangles\rhomb.cpp">
+      <Filter>Исходные файлы\figures\Quadrangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\Quadrangles\square.cpp">
+      <Filter>Исходные файлы\figures\Quadrangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Figures\badFigureException.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Figures\figure.h">
+      <Filter>Файлы заголовков\figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\print_info.h">
+      <Filter>Файлы заголовков\figures</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Triangles\equilateralTriangle.h">
+      <Filter>Файлы заголовков\figures\Triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Triangles\isoscelesTriangle.h">
+      <Filter>Файлы заголовков\figures\Triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Triangles\rectangularTriangle.h">
+      <Filter>Файлы заголовков\figures\Triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Triangles\triangle.h">
+      <Filter>Файлы заголовков\figures\Triangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Quadrangles\parallelogram.h">
+      <Filter>Файлы заголовков\figures\Quadrangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Quadrangles\quadrangle.h">
+      <Filter>Файлы заголовков\figures\Quadrangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Quadrangles\rectangle.h">
+      <Filter>Файлы заголовков\figures\Quadrangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Quadrangles\rhomb.h">
+      <Filter>Файлы заголовков\figures\Quadrangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\Quadrangles\square.h">
+      <Filter>Файлы заголовков\figures\Quadrangles</Filter>
+    </ClInclude>
+    <ClInclude Include="Figures\badFigureException.h">
+      <Filter>Файлы заголовков\figures</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
