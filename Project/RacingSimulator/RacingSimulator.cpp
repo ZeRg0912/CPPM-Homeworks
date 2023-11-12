@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int distance = 100;
+    int distance = 10000;
     RACE(distance);
     return 0;
 }
