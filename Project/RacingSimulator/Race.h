@@ -12,11 +12,17 @@
 #include "Transports/Flying/EAGLE.h"
 #include "Transports/Flying/BROOMSTICK.h"
 
+enum class groundTransport;
+enum class airTransport;
+enum class allTransport;
+
 class Race {
 public:
 	void calculateRaceTime(std::vector<TRANSPORT*>& arr, int distance);
 	void raceTimeSort(std::vector<TRANSPORT*>& arr);
 	void printResultTable(std::vector<TRANSPORT*>& arr);
+	void printRegistredTransports(std::vector<TRANSPORT*>& arr);
 	void race(int distance);
+	std::vector<TRANSPORT*> createTransports(std::vector<TRANSPORT*>& arr);
 	void clearTransports(std::vector<TRANSPORT*>& arr);
 };
