@@ -1,10 +1,14 @@
-﻿#include "Race.h"
+﻿#include "RacingSimulator.h"
 
 using namespace std;
 
 int main()
 {
-    int distance = 10000;
-    RACE(distance);
+    setlocale(LC_ALL, "Russian");
+    system("chcp 1251");
+    int distance = 5000;
+    Race race;
+    race.race(distance);
+
     return 0;
 }

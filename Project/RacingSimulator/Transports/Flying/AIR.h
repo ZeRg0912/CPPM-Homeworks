@@ -4,7 +4,7 @@
 class AIR : public TRANSPORT {
 public:
 	AIR();
-	float timeRace(float _distance) override;
+	float raceTime(float _distance) override;
 protected:
 	AIR(int _speed, int _distanceDeduction);
 };

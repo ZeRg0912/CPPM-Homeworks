@@ -12,8 +12,8 @@ BOOTS::BOOTS() : GROUND() {
 	this->quantityOfRests = 2;
 };
 
-float BOOTS::timeRace(float _distance) {
-	float timeRace = 0;
+float BOOTS::raceTime(float _distance) {
+	float time = 0;
 	float rest = 0;
 	int stops = _distance / wayToRest;
 	do {
@@ -27,6 +27,7 @@ float BOOTS::timeRace(float _distance) {
 		}
 	} while (stops != 0);
 	float move = _distance / speed;
-	timeRace = rest + move;
-	return timeRace;
+	time = rest + move;
+	this->distanceTime = time;
+	return time;
 };

@@ -12,8 +12,8 @@ CENTAUR::CENTAUR() : GROUND() {
 	this->quantityOfRests = 0;
 };
 
-float CENTAUR::timeRace(float _distance) {
-	float timeRace = 0;
+float CENTAUR::raceTime(float _distance) {
+	float time = 0;
 	float rest = 0;
 	int stops = _distance / wayToRest;
 	do {
@@ -21,6 +21,7 @@ float CENTAUR::timeRace(float _distance) {
 		stops--;
 	} while (stops != 0);
 	float move = _distance / speed;
-	timeRace = rest + move;
-	return timeRace;
+	time = rest + move;
+	this->distanceTime = time;
+	return time;
 };

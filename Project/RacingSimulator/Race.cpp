@@ -1,45 +1,52 @@
 #include "Race.h"
 
-void insertionSort(std::vector<TRANSPORT*>& arr, int distance) {
+void Race::calculateRaceTime(std::vector<TRANSPORT*>& arr, int distance) {
+	std::cout << "Длина маршрута: " << distance << " км." << std::endl;
+	for (int i = 0; i < arr.size(); i++) {
+		arr[i]->raceTime(distance);
+	}
+}
+void Race::raceTimeSort(std::vector<TRANSPORT*>& arr) {
 	for (int i = 0; i < arr.size(); i++) {
 		TRANSPORT* key = arr[i];
 		int j = i - 1;
-		while (j >= 0 && arr[j]->timeRace(distance) > key->timeRace(distance)) {
+		while (j >= 0 && arr[j]->getDistanceTime() > key->getDistanceTime()) {
 			arr[j + 1] = arr[j];
 			j--;
 		}
 		arr[j + 1] = key;
 	}
 }
+void Race::printResultTable(std::vector<TRANSPORT*>& arr) {
+	std::cout << "Время прохождения маршрута: " << std::endl;
+	for (const auto& obj : arr) {
+		std::cout << obj->getName() << " : " << obj->getDistanceTime() << " часов." << std::endl;
+	}
+}
 
-void RACE(int distance) {
-	setlocale(LC_ALL, "Russian");
-	system("chcp 1251");
+void Race::clearTransports(std::vector<TRANSPORT*>& arr) {
+	for (auto obj : arr) {
+		delete obj;
+	}
+	arr.clear();
+}
+
+void Race::race(int distance) {
 	system("cls");
 
-	std::vector<TRANSPORT*> arr;
-	CAMEL camel;
-	FAST_CAMEL fastCamel;
-	BOOTS boots;
-	CENTAUR centaur;
+	std::vector<TRANSPORT*> transportsForRace;
 
-	MAGIC_CARPET carpet;
-	EAGLE eagle;
-	BROOMSTICK stick;
+	transportsForRace.push_back(new CAMEL());
+	transportsForRace.push_back(new BROOMSTICK());
+	transportsForRace.push_back(new CENTAUR());
+	transportsForRace.push_back(new FAST_CAMEL());
+	transportsForRace.push_back(new MAGIC_CARPET());
+	transportsForRace.push_back(new EAGLE());
+	transportsForRace.push_back(new BOOTS());
 
-	arr.push_back(&camel);
-	arr.push_back(&boots);
-	arr.push_back(&fastCamel);
-	arr.push_back(&centaur);
-	arr.push_back(&carpet);
-	arr.push_back(&eagle);
-	arr.push_back(&stick);
+	calculateRaceTime(transportsForRace, distance);
+	raceTimeSort(transportsForRace);
+	printResultTable(transportsForRace);
 
-	insertionSort(arr, distance);
-	
-	std::cout << "Длина маршрута: " << distance << " км." << std::endl;
-	std::cout << "Время прохождения маршрута: " << std::endl;
-	for (const auto& obj : arr) {		
-		std::cout << obj->getName() << " : " << obj->timeRace(distance) << " часов." << std::endl;
-	}
+	clearTransports(transportsForRace);
 }

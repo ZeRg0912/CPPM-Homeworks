@@ -10,10 +10,11 @@ BROOMSTICK::BROOMSTICK() : AIR() {
 	this->distanceReduction = 1;
 };
 
-float BROOMSTICK::timeRace(float _distance) {
-	float timeRace = 0;
+float BROOMSTICK::raceTime(float _distance) {
+	float time = 0;
 	float move = _distance / speed;
 	this->distanceReduction = (100 - (static_cast<int>(_distance / 1000)));
-	timeRace = move * (distanceReduction / 100);
-	return timeRace;
+	time = move * (distanceReduction / 100);
+	this->distanceTime = time;
+	return time;
 };

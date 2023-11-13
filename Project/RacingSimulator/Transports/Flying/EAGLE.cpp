@@ -10,9 +10,10 @@ EAGLE::EAGLE() : AIR() {
 	this->distanceReduction = 0.94;
 };
 
-float EAGLE::timeRace(float _distance) {
-	float timeRace = 0;
+float EAGLE::raceTime(float _distance) {
+	float time = 0;
 	float move = _distance / speed;
-	timeRace = move * distanceReduction;
-	return timeRace;
+	time = move * distanceReduction;
+	this->distanceTime = time;
+	return time;
 };

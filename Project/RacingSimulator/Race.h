@@ -12,5 +12,11 @@
 #include "Transports/Flying/EAGLE.h"
 #include "Transports/Flying/BROOMSTICK.h"
 
-void insertionSort(std::vector<TRANSPORT*>& arr);
-void RACE(int distance);
+class Race {
+public:
+	void calculateRaceTime(std::vector<TRANSPORT*>& arr, int distance);
+	void raceTimeSort(std::vector<TRANSPORT*>& arr);
+	void printResultTable(std::vector<TRANSPORT*>& arr);
+	void race(int distance);
+	void clearTransports(std::vector<TRANSPORT*>& arr);
+};
