@@ -8,7 +8,7 @@ int main()
     system("chcp 1251");
     int distance = 5000;
     Race race;
-    race.race(distance);
+    race.raceBegin(distance);
 
     return 0;
 }

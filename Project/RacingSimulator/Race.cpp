@@ -1,13 +1,13 @@
 #include "Race.h"
 
 enum class groundTransport {
-	camel = 1, fastCamel, centaur, boots
+	boots = 1, camel, centaur, fastCamel
 };
 enum class airTransport {
-	magicCarpet = 1, eagle, stick
+	stick = 1, eagle, magicCarpet
 };
 enum class allTransport {
-	camel = 1, fastCamel, centaur, boots, magicCarpet, eagle, stick
+	boots = 1, stick, camel, centaur, eagle, fastCamel, magicCarpet
 };
 
 void Race::calculateRaceTime(std::vector<TRANSPORT*>& arr, int distance) {
@@ -40,9 +40,11 @@ void Race::printResultTable(std::vector<TRANSPORT*>& arr) {
 void Race::printRegistredTransports(std::vector<TRANSPORT*>& arr) {
 	system("cls");
 	std::cout << "Зарегестрированный транспорт: " << std::endl;
+	int lastIndex = 0;
 	for (const auto& obj : arr) {
 		std::cout << obj->getName();
-		if (arr.size() > 1) std::cout << ", ";
+		if (lastIndex != arr.size() - 1) std::cout << ", ";		
+		lastIndex++;
 	}
 	std::cout << std::endl;
 }
@@ -54,50 +56,63 @@ void Race::clearTransports(std::vector<TRANSPORT*>& arr) {
 	arr.clear();
 }
 
-std::vector<TRANSPORT*> Race::createTransports(std::vector<TRANSPORT*>& arr) {
+std::vector<TRANSPORT*> Race::createTransports(std::vector<TRANSPORT*>& arr, int distance) {
 	allTransport typeTransport;
 	int type;
 	std::vector<TRANSPORT*> transportsForRace;
 	do {
-		system("cls");
 		if (transportsForRace.size()) printRegistredTransports(transportsForRace);
-		std::cout << "Варианты транспорта:" << std::endl;
-		std::cout << "1 - Верблюд, 2 - Верблюд-быстроход, 3 - кентавр, 4 - ботинки - скороходы, 5 - ковер - самолет, 6 - орел, 7 - метла, 0 - конец регистрации" << std::endl;
-		std::cout << "Введите номер транспорта который необходимо зарегестрировать: ";
+		std::cout << "Гонка для назеного и воздушного транспорта. Расстояние: " << distance << std::endl;
+		std::cout << "1. Ботинки - вездеходы" << std::endl;
+		std::cout << "2. Метла" << std::endl;
+		std::cout << "3. Верблюд" << std::endl;
+		std::cout << "4. Кентавр" << std::endl;
+		std::cout << "5. Орел" << std::endl;
+		std::cout << "6. Верблюд - быстроход" << std::endl;
+		std::cout << "7. Ковер - самолет" << std::endl;	
+		std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
 		std::cin >> type;
 		typeTransport = static_cast<allTransport>(type);
 		switch (typeTransport) {
-		case allTransport::camel:
-			transportsForRace.push_back(new CAMEL());
-			break;
-		case allTransport::fastCamel:
-			transportsForRace.push_back(new FAST_CAMEL());
-			break;
-		case allTransport::centaur:
-			transportsForRace.push_back(new CENTAUR());
-			break;
 		case allTransport::boots:
 			transportsForRace.push_back(new BOOTS());
-			break;
-		case allTransport::magicCarpet:
-			transportsForRace.push_back(new MAGIC_CARPET());
-			break;
-		case allTransport::eagle:
-			transportsForRace.push_back(new EAGLE());
+			std::cout << "Ботинки - вездеходы успешно зарегестрированы" << std::endl; // Сделать вывод
 			break;
 		case allTransport::stick:
 			transportsForRace.push_back(new BROOMSTICK());
+			std::cout <<"Метла успешно зарегестрирована" << std::endl;
 			break;
+		case allTransport::camel:
+			transportsForRace.push_back(new CAMEL());
+			std::cout << "Верблюд успешно зарегестрирован" << std::endl;
+			break;
+		case allTransport::centaur:
+			transportsForRace.push_back(new CENTAUR());
+			std::cout << "Кентавр успешно зарегестрирован" << std::endl;
+			break;
+		case allTransport::eagle:
+			transportsForRace.push_back(new EAGLE());
+			std::cout << "Орел успешно зарегестрирован" << std::endl;
+			break;
+		case allTransport::fastCamel:
+			transportsForRace.push_back(new FAST_CAMEL());
+			std::cout << "Верблюд - быстроход успешно зарегестрирован" << std::endl;
+			break;
+		case allTransport::magicCarpet:
+			transportsForRace.push_back(new MAGIC_CARPET());
+			std::cout << "Ковер - самолет успешно зарегестрирован" << std::endl;
+			break;
+			system("cls");
 		}
 	} while (type != 0);	
 	std::cout << "Регистрация окончена!" << std::endl;
 	return transportsForRace;
 }
 
-void Race::race(int distance) {
+void Race::raceBegin(int distance) {
 	system("cls");
 
-	std::vector<TRANSPORT*> transportsForRace = createTransports(transportsForRace);
+	std::vector<TRANSPORT*> transportsForRace = createTransports(transportsForRace, distance);
 
 	calculateRaceTime(transportsForRace, distance);
 	raceTimeSort(transportsForRace);

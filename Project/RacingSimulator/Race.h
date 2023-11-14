@@ -22,7 +22,7 @@ public:
 	void raceTimeSort(std::vector<TRANSPORT*>& arr);
 	void printResultTable(std::vector<TRANSPORT*>& arr);
 	void printRegistredTransports(std::vector<TRANSPORT*>& arr);
-	void race(int distance);
-	std::vector<TRANSPORT*> createTransports(std::vector<TRANSPORT*>& arr);
+	void raceBegin(int distance);
+	std::vector<TRANSPORT*> createTransports(std::vector<TRANSPORT*>& arr, int distance);
 	void clearTransports(std::vector<TRANSPORT*>& arr);
 };
