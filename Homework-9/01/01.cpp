@@ -13,17 +13,17 @@ public:
 		denominator_ = denominator;
 	}
 
-	double fraction() { return static_cast<double>(numerator_) / static_cast<double>(denominator_); }
+	double fractionResult() { return static_cast<double>(numerator_) / static_cast<double>(denominator_); }
 
-	bool operator== (Fraction right) { return fraction() == right.fraction(); }
+	bool operator== (Fraction right) { return fractionResult() == right.fractionResult(); }
 
 	bool operator!= (Fraction right) { return !(*this == right); }
 
 	bool operator< (Fraction right) {
-		if (fraction() < right.fraction()) {
+		if (fractionResult() < right.fractionResult()) {
 			return true;
 		}
-		else if (fraction() < right.fraction()) {
+		else if (fractionResult() < right.fractionResult()) {
 			return true;
 		}
 		else {
@@ -42,9 +42,9 @@ int main()
 	system("chcp 1251");
 	system("cls");
 
-	Fraction f1(3, 12);
+	Fraction f1(4, 3);
 	//Fraction f1(6, 11);
-	Fraction f2(5, 8);
+	Fraction f2(6, 11);
 
 	std::cout << "f1" << ((f1 == f2) ? " == " : " not == ") << "f2" << '\n';
 	std::cout << "f1" << ((f1 != f2) ? " != " : " not != ") << "f2" << '\n';
