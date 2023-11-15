@@ -16,13 +16,32 @@ void RaceAirGround::printRegisterTableMenu(int distance) {
 	std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
 }
 
+void RaceAirGround::printResultTable(std::vector<TRANSPORT*>& arr) {
+	system("cls");
+	std::cout << "Время прохождения маршрута: " << std::endl;
+	for (const auto& obj : arr) {
+		std::cout << obj->getName() << " : " << obj->getDistanceTime() << " часов." << std::endl;
+	}
+}
+
+void RaceAirGround::printRegistredTransports(std::vector<TRANSPORT*>& arr) {
+	std::cout << "Зарегестрированный транспорт: ";
+	int lastIndex = 0;
+	for (const auto& obj : arr) {
+		std::cout << obj->getName();
+		if (lastIndex != arr.size() - 1) std::cout << ", ";
+		lastIndex++;
+	}
+	std::cout << std::endl;
+}
+
 void RaceAirGround::printLastRegistredTransport(std::vector<TRANSPORT*>& transportsForRace) {
 	if (transportsForRace.size()) {
 		printRegistredTransports(transportsForRace);
 	}
 }
 
-void RaceAirGround::calculateRaceTime(std::vector<TRANSPORT*>& arr, int distance) {
+void RaceAirGround::startRace(std::vector<TRANSPORT*>& arr, int distance) {
 	std::cout << "Длина маршрута: " << distance << " км." << std::endl;
 	for (int i = 0; i < arr.size(); i++) {
 		arr[i]->raceTime(distance);
@@ -39,32 +58,6 @@ void RaceAirGround::raceTimeSort(std::vector<TRANSPORT*>& arr) {
 		}
 		arr[j + 1] = key;
 	}
-}
-
-void RaceAirGround::printResultTable(std::vector<TRANSPORT*>& arr) {
-	system("cls");
-	std::cout << "Время прохождения маршрута: " << std::endl;
-	for (const auto& obj : arr) {
-		std::cout << obj->getName() << " : " << obj->getDistanceTime() << " часов." << std::endl;
-	}
-}
-
-void RaceAirGround::printRegistredTransports(std::vector<TRANSPORT*>& arr) {
-	std::cout << "Зарегестрированный транспорт: ";
-	int lastIndex = 0;
-	for (const auto& obj : arr) {
-		std::cout << obj->getName();
-		if (lastIndex != arr.size() - 1) std::cout << ", ";		
-		lastIndex++;
-	}
-	std::cout << std::endl;
-}
-
-void RaceAirGround::clearTransports(std::vector<TRANSPORT*>& arr) {
-	for (auto obj : arr) {
-		delete obj;
-	}
-	arr.clear();
 }
 
 void RaceAirGround::registerTransport(std::vector<TRANSPORT*>& transports, TRANSPORT* type) {
@@ -87,22 +80,9 @@ void RaceAirGround::registerTransport(std::vector<TRANSPORT*>& transports, TRANS
 	}
 }
 
-void RaceAirGround::raceBegin(int distance) {
-	system("cls");
-
-	std::vector<TRANSPORT*> transportsForRace = createTransports(transportsForRace, distance);
-
-	calculateRaceTime(transportsForRace, distance);
-	raceTimeSort(transportsForRace);
-	printResultTable(transportsForRace);
-
-	clearTransports(transportsForRace);
-}
-
-std::vector<TRANSPORT*> RaceAirGround::createTransports(std::vector<TRANSPORT*>& arr, int distance) {
+std::vector<TRANSPORT*> RaceAirGround::createTransports(std::vector<TRANSPORT*>& transportsForRace, int distance) {
 	allTransport typeTransport;
 	int type;
-	std::vector<TRANSPORT*> transportsForRace;
 	do {
 		do {
 			printLastRegistredTransport(transportsForRace);
@@ -115,15 +95,14 @@ std::vector<TRANSPORT*> RaceAirGround::createTransports(std::vector<TRANSPORT*>&
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			}
 			else if (type < 0 || type > 7) {
-				std::cout << "Введите номер из списка!" << std::endl;
+				std::cout << "Выберите номер из списка!" << std::endl;
 				std::cin.clear();
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			}
 			else { break; }
-		} while (!isdigit(type));		
+		} while (!isdigit(type));
 		typeTransport = static_cast<allTransport>(type);
 		system("cls");
-		if (transportsForRace.size() < 2 && type == 0) std::cout << "Должно быть зарегестрировано хотя бы 2 транспорта" << std::endl;
 		switch (typeTransport) {
 		case allTransport::boots:
 			registerTransport(transportsForRace, new BOOTS());
@@ -147,7 +126,56 @@ std::vector<TRANSPORT*> RaceAirGround::createTransports(std::vector<TRANSPORT*>&
 			registerTransport(transportsForRace, new MAGIC_CARPET());
 			break;
 		}
-	} while (type != 0 || transportsForRace.size() < 2);
-	std::cout << "Регистрация окончена!" << std::endl;
+	} while (type != 0);
 	return transportsForRace;
+}
+
+void RaceAirGround::clearTransports(std::vector<TRANSPORT*>& arr) {
+	for (auto obj : arr) {
+		delete obj;
+	}
+	arr.clear();
+}
+
+void RaceAirGround::raceBegin(int distance) {
+	system("cls");
+	std::vector<TRANSPORT*> transportsForRace;
+	int input;
+	do {
+		do {
+			std::cout << "Должно быть зарегестрировано хотя бы 2 транспортных средства" << std::endl;
+			std::cout << "1. Зарегестрировать транспорт" << std::endl;
+			if (transportsForRace.size() >= 2) std::cout << "2. Начать гонку" << std::endl;
+			std::cout << "Выберите действие: ";
+			std::cin >> input;
+			system("cls");
+			if (std::cin.fail()) {
+				std::cout << "Выберите номер из списка!" << std::endl;
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			}
+			else { break; }
+		} while (!isdigit(input) && (input != 1 || input != 2));
+		if (transportsForRace.size() >= 2) {
+			switch (input) {
+			case 1:
+				transportsForRace = createTransports(transportsForRace, distance);
+				break;
+			case 2:
+				if (transportsForRace.size() >= 2) startRace(transportsForRace, distance);
+				break;
+			}
+		} else {
+			switch (input) {
+			case 1:
+				transportsForRace = createTransports(transportsForRace, distance);
+				break;
+			default:
+				std::cout << "Выберите номер из списка!" << std::endl;
+			}
+		}
+	} while (transportsForRace.size() < 2 || input != 2);
+	raceTimeSort(transportsForRace);
+	printResultTable(transportsForRace);
+	clearTransports(transportsForRace);
 }

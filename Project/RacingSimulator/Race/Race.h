@@ -9,4 +9,5 @@ class Race {
 public:
 	void begin();
 	void printMenuTable();
+	void doRestart(Race& race);
 };

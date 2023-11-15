@@ -5,17 +5,16 @@ enum class airTransport {
 };
 
 void RaceAir::printRegisterTableMenu(int distance) {
-	std::cout << "Гонка для назеного и воздушного транспорта. Расстояние: " << distance << std::endl;
+	std::cout << "Гонка для воздушного транспорта. Расстояние: " << distance << std::endl;
 	std::cout << "1. Метла" << std::endl;
 	std::cout << "2. Орел" << std::endl;
 	std::cout << "3. Ковер - самолет" << std::endl;
 	std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
 }
 
-std::vector<TRANSPORT*> RaceAir::createTransports(std::vector<TRANSPORT*>& arr, int distance) {
+std::vector<TRANSPORT*> RaceAir::createTransports(std::vector<TRANSPORT*>& transportsForRace, int distance) {
 	airTransport typeTransport;
 	int type;
-	std::vector<TRANSPORT*> transportsForRace;
 	do {
 		do {
 			printLastRegistredTransport(transportsForRace);
@@ -36,7 +35,6 @@ std::vector<TRANSPORT*> RaceAir::createTransports(std::vector<TRANSPORT*>& arr, 
 		} while (!isdigit(type));
 		typeTransport = static_cast<airTransport>(type);
 		system("cls");
-		if (transportsForRace.size() < 2 && type == 0) std::cout << "Должно быть зарегестрировано хотя бы 2 транспорта" << std::endl;
 		switch (typeTransport) {
 		case airTransport::stick:
 			registerTransport(transportsForRace, new BROOMSTICK());
@@ -48,7 +46,6 @@ std::vector<TRANSPORT*> RaceAir::createTransports(std::vector<TRANSPORT*>& arr, 
 			registerTransport(transportsForRace, new MAGIC_CARPET());
 			break;
 		}
-	} while (type != 0 || transportsForRace.size() < 2);
-	std::cout << "Регистрация окончена!" << std::endl;
+	} while (type != 0);
 	return transportsForRace;
 }

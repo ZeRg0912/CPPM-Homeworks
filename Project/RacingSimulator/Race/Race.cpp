@@ -24,6 +24,34 @@ void Race::printMenuTable() {
 	std::cout << "Выберите тип гонки: ";
 }
 
+void Race::doRestart(Race& race) {
+	int restart;
+	do {
+		std::cout << "\n1. Провести еще одну гонку" << std::endl;
+		std::cout << "2. Выйти" << std::endl;
+		std::cout << "Выберите действие: ";
+		std::cin >> restart;
+		system("cls");
+		if (std::cin.fail()) {
+			std::cout << "Введите номер!" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else if (restart < 1 || restart > 2) {
+			std::cout << "Выберите номер из списка!" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else { break; }
+	} while (restart < 1 || restart > 2);
+	system("cls");
+	switch (restart) {
+	case 1:
+		race.begin();
+		break;
+	}
+}
+
 void Race::begin() {	
 	int input;
 	int distance;
@@ -34,6 +62,11 @@ void Race::begin() {
 		system("cls");
 		if (std::cin.fail()) {
 			std::cout << "Введите номер!" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else if (input < 1 || input > 3) {
+			std::cout << "Выберите номер из списка!" << std::endl;
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
@@ -61,4 +94,5 @@ void Race::begin() {
 		break;
 	}
 	delete currentMode;
+	doRestart(*this);
 }
