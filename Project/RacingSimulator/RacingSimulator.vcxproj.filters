@@ -31,6 +31,12 @@
     <Filter Include="Исходные файлы\Transports\Ground">
       <UniqueIdentifier>{57a4f5a3-133e-4918-892d-0a349233e6ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Race">
+      <UniqueIdentifier>{d7f4d056-ce68-4981-a219-7a6e277027c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Race">
+      <UniqueIdentifier>{cb7074d7-acf8-45c0-b30d-0248a6199b58}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RacingSimulator.cpp">
@@ -66,8 +72,17 @@
     <ClCompile Include="Transports\Flying\BROOMSTICK.cpp">
       <Filter>Исходные файлы\Transports\Flying</Filter>
     </ClCompile>
-    <ClCompile Include="Race.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Race\RaceAirGround.cpp">
+      <Filter>Исходные файлы\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="Race\Race.cpp">
+      <Filter>Исходные файлы\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="Race\RaceAir.cpp">
+      <Filter>Исходные файлы\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="Race\RaceGround.cpp">
+      <Filter>Исходные файлы\Race</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -101,11 +116,20 @@
     <ClInclude Include="Transports\Flying\BROOMSTICK.h">
       <Filter>Файлы заголовков\Transports\FLying</Filter>
     </ClInclude>
-    <ClInclude Include="Race.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="RacingSimulator.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Race\RaceAirGround.h">
+      <Filter>Файлы заголовков\Race</Filter>
+    </ClInclude>
+    <ClInclude Include="Race\Race.h">
+      <Filter>Файлы заголовков\Race</Filter>
+    </ClInclude>
+    <ClInclude Include="Race\RaceAir.h">
+      <Filter>Файлы заголовков\Race</Filter>
+    </ClInclude>
+    <ClInclude Include="Race\RaceGround.h">
+      <Filter>Файлы заголовков\Race</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

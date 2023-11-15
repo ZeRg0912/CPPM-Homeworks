@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Race.cpp" />
+    <ClCompile Include="Race\Race.cpp" />
+    <ClCompile Include="Race\RaceAir.cpp" />
+    <ClCompile Include="Race\RaceAirGround.cpp" />
+    <ClCompile Include="Race\RaceGround.cpp" />
     <ClCompile Include="RacingSimulator.cpp" />
     <ClCompile Include="Transports\Flying\AIR.cpp" />
     <ClCompile Include="Transports\Flying\BROOMSTICK.cpp" />
@@ -141,7 +144,10 @@
     <ClCompile Include="Transports\TRANSPORT.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Race.h" />
+    <ClInclude Include="Race\Race.h" />
+    <ClInclude Include="Race\RaceAir.h" />
+    <ClInclude Include="Race\RaceAirGround.h" />
+    <ClInclude Include="Race\RaceGround.h" />
     <ClInclude Include="RacingSimulator.h" />
     <ClInclude Include="Transports\Flying\AIR.h" />
     <ClInclude Include="Transports\Flying\BROOMSTICK.h" />
