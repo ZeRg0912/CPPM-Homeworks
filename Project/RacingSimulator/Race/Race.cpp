@@ -5,6 +5,7 @@ int setDistance() {
 	do {
 		std::cout << "Укажите длину дистанции (должна быть положительна): ";
 		std::cin >> distance;
+		system("cls");
 		if (std::cin.fail() || distance <= 0) {
 			std::cout << "Введите положительное число!" << std::endl;
 			std::cin.clear();
@@ -15,25 +16,29 @@ int setDistance() {
 	return distance;
 }
 
+void Race::printMenuTable() {
+	std::cout << "Добро пожаловать в гоночный симулятор!" << std::endl;
+	std::cout << "1. Гонка для наземного транспорта" << std::endl;
+	std::cout << "2. Гонка для воздушного транспорта" << std::endl;
+	std::cout << "3. Гонка для наземного и воздушного транспорта" << std::endl;
+	std::cout << "Выберите тип гонки: ";
+}
+
 void Race::begin() {	
 	int input;
 	int distance;
 	RaceAirGround* currentMode = nullptr;
 	do {
-		system("cls");
-		std::cout << "Добро пожаловать в гоночный симулятор!" << std::endl;
-		std::cout << "1. Гонка для наземного транспорта" << std::endl;
-		std::cout << "2. Гонка для воздушного транспорта" << std::endl;
-		std::cout << "3. Гонка для наземного и воздушного транспорта" << std::endl;
-		std::cout << "Выберите тип гонки: ";
+		printMenuTable();
 		std::cin >> input;
+		system("cls");
 		if (std::cin.fail()) {
 			std::cout << "Введите номер!" << std::endl;
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 		else { break; }
-	} while (isdigit(input));
+	} while (!isdigit(input));
 	if (currentMode != nullptr) delete currentMode;
 	switch (input) {
 	case 1:

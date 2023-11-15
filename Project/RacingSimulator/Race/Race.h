@@ -8,4 +8,5 @@ int setDistance();
 class Race {
 public:
 	void begin();
+	void printMenuTable();
 };
