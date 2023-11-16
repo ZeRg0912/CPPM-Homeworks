@@ -3,15 +3,17 @@
 #include "Race/RaceAir.h"
 #include "Race/RaceGround.h"
 
+#define RACINGLIBRARY_EXPORTS
+
 #ifdef RACINGLIBRARY_EXPORTS
 #define RACINGLIBRARY_API __declspec(dllexport)
 #else 
 #define RACINGLIBRARY_API __declspec(dllimport)
 #endif
 
-RACINGLIBRARY_API int setDistance();
+int RACINGLIBRARY_API setDistance();
 
-class RACINGLIBRARY_API  Race {
+class RACINGLIBRARY_API Race {
 public:
 	void begin();
 	void printMenuTable();
