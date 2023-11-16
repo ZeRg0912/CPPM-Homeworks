@@ -1,8 +1,4 @@
 #pragma once
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
 #include "../Transports/Ground/CAMEL.h"
 #include "../Transports/Ground/FAST_CAMEL.h"
 #include "../Transports/Ground/CENTAUR.h"
@@ -25,7 +21,7 @@ public:
 	void startRace(std::vector<TRANSPORT*>& arr, int distance);
 	void printResultTable(std::vector<TRANSPORT*>& arr);
 	void printRegistredTransports(std::vector<TRANSPORT*>& arr);
-	virtual void printRegisterTableMenu();
+	virtual void printRegisterTableMenu(int distance);
 	void printLastRegistredTransport(std::vector<TRANSPORT*>& arr);
 	virtual std::vector<TRANSPORT*> createTransports(std::vector<TRANSPORT*>& arr, int distance);
 	void clearTransports(std::vector<TRANSPORT*>& arr);

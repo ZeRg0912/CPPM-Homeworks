@@ -10,6 +10,6 @@ AIR::AIR() {
 	this->distanceReduction = 1;
 }
 
-int AIR::raceTime(float _distance) {
+float AIR::raceTime(float _distance) {
 	return distanceTime = _distance / speed;
 };

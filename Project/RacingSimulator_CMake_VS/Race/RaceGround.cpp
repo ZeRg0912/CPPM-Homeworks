@@ -4,7 +4,8 @@ enum class groundTransport {
 	boots = 1, camel, centaur, fastCamel
 };
 
-void RaceGround::printRegisterTableMenu() {
+void RaceGround::printRegisterTableMenu(int distance) {
+	std::cout << "Гонка для назеного транспорта. Расстояние: " << distance << std::endl;
 	std::cout << "1. Ботинки - вездеходы" << std::endl;
 	std::cout << "2. Верблюд" << std::endl;
 	std::cout << "3. Кентавр" << std::endl;
@@ -17,9 +18,8 @@ std::vector<TRANSPORT*> RaceGround::createTransports(std::vector<TRANSPORT*>& tr
 	int type;
 	do {
 		do {
-			std::cout << "Гонка для назеного транспорта. Расстояние: " << distance << std::endl;
 			printLastRegistredTransport(transportsForRace);
-			printRegisterTableMenu();
+			printRegisterTableMenu(distance);
 			std::cin >> type;
 			system("cls");
 			if (std::cin.fail()) {

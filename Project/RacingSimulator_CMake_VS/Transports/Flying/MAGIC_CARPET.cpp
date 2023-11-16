@@ -10,7 +10,7 @@ MAGIC_CARPET::MAGIC_CARPET() : AIR() {
 	this->distanceReduction = 1;
 };
 
-int MAGIC_CARPET::raceTime(float _distance) {
+float MAGIC_CARPET::raceTime(float _distance) {
 	float time = 0;
 	float move = _distance / speed;
 	if (_distance < 1000) {

@@ -1,5 +1,4 @@
-﻿#pragma comment(lib,"RacingLib.lib")
-#include "RacingLib.h"
+﻿#include "RacingSimulator.h"
 
 using namespace std;
 

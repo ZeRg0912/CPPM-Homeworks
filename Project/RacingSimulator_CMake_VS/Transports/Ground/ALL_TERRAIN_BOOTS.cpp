@@ -12,7 +12,7 @@ BOOTS::BOOTS() : GROUND() {
 	this->quantityOfRests = 2;
 };
 
-int BOOTS::raceTime(float _distance) {
+float BOOTS::raceTime(float _distance) {
 	float time = 0;
 	float rest = 0;
 	int stops = _distance / wayToRest;

@@ -12,7 +12,7 @@ FAST_CAMEL::FAST_CAMEL() : GROUND() {
 	this->quantityOfRests = 3;
 };
 
-int FAST_CAMEL::raceTime(float _distance) {
+float FAST_CAMEL::raceTime(float _distance) {
 	float time = 0;
 	float rest = 0;
 	int stops = _distance / wayToRest;

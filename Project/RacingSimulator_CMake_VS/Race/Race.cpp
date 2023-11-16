@@ -1,4 +1,4 @@
-#include "RacingLib.h"
+#include "Race.h"
 
 int setDistance() {
 	int distance;
@@ -52,7 +52,7 @@ void Race::doRestart(Race& race) {
 	}
 }
 
-void Race::begin() {
+void Race::begin() {	
 	int input;
 	int distance;
 	RaceAirGround* currentMode = nullptr;

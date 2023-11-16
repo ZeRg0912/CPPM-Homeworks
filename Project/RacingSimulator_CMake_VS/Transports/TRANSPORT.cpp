@@ -24,7 +24,7 @@ int TRANSPORT::getDistanceReduction() {
 	return distanceReduction;
 }
 
-int TRANSPORT::raceTime(float _distance) {
+float TRANSPORT::raceTime(float _distance) {
 	return distanceTime = _distance / speed;
 }
 

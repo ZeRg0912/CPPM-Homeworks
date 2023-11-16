@@ -1,7 +1,4 @@
 #pragma once
-#include <iostream>
-#include <vector>
-#include <algorithm>
 
 #include "../Transports/Ground/CAMEL.h"
 #include "../Transports/Ground/FAST_CAMEL.h"

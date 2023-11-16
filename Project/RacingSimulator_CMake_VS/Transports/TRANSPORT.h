@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include <vector>
+#include <algorithm>
 #include <string>
 
 class TRANSPORT {
@@ -21,5 +24,5 @@ public:
 	int getDistanceReduction();
 	float getDistanceTime();
 
-	virtual int raceTime(float _distance);
+	virtual float raceTime(float _distance);
 };

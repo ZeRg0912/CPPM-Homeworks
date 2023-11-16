@@ -4,7 +4,8 @@ enum class allTransport {
 	boots = 1, stick, camel, centaur, eagle, fastCamel, magicCarpet
 };
 
-void RaceAirGround::printRegisterTableMenu() {
+void RaceAirGround::printRegisterTableMenu(int distance) {
+	std::cout << "Гонка для назеного и воздушного транспорта. Расстояние: " << distance << std::endl;
 	std::cout << "1. Ботинки - вездеходы" << std::endl;
 	std::cout << "2. Метла" << std::endl;
 	std::cout << "3. Верблюд" << std::endl;
@@ -17,14 +18,14 @@ void RaceAirGround::printRegisterTableMenu() {
 
 void RaceAirGround::printResultTable(std::vector<TRANSPORT*>& arr) {
 	system("cls");
-	std::cout << "Результаты гонки: " << std::endl;
+	std::cout << "Время прохождения маршрута: " << std::endl;
 	for (const auto& obj : arr) {
-		std::cout << obj->getName() << ". Время: " << obj->getDistanceTime() << std::endl;
+		std::cout << obj->getName() << " : " << obj->getDistanceTime() << " часов." << std::endl;
 	}
 }
 
 void RaceAirGround::printRegistredTransports(std::vector<TRANSPORT*>& arr) {
-	std::cout << "Зарегестрированные транспортные средства: ";
+	std::cout << "Зарегестрированный транспорт: ";
 	int lastIndex = 0;
 	for (const auto& obj : arr) {
 		std::cout << obj->getName();
@@ -41,6 +42,7 @@ void RaceAirGround::printLastRegistredTransport(std::vector<TRANSPORT*>& transpo
 }
 
 void RaceAirGround::startRace(std::vector<TRANSPORT*>& arr, int distance) {
+	std::cout << "Длина маршрута: " << distance << " км." << std::endl;
 	for (int i = 0; i < arr.size(); i++) {
 		arr[i]->raceTime(distance);
 	}
@@ -70,11 +72,11 @@ void RaceAirGround::registerTransport(std::vector<TRANSPORT*>& transports, TRANS
 		}
 	}
 	if (registred == false) {
-		std::cout << "Транспорт " << type->getName() << " успешно зарагестрирован!" << std::endl;
+		std::cout << "Транспорт: " << type->getName() << " успешно добавлен." << std::endl;
 		transports.push_back(type);
 	}
 	else {
-		std::cout << "Транспорт " << type->getName() << " уже зарегестрирован!" << std::endl;
+		std::cout << "Транспорт " << type->getName() << " уже зарегестрирован" << std::endl;
 	}
 }
 
@@ -83,9 +85,8 @@ std::vector<TRANSPORT*> RaceAirGround::createTransports(std::vector<TRANSPORT*>&
 	int type;
 	do {
 		do {
-			std::cout << "Гонка для назеного и воздушного транспорта. Расстояние: " << distance << std::endl;
 			printLastRegistredTransport(transportsForRace);
-			printRegisterTableMenu();
+			printRegisterTableMenu(distance);
 			std::cin >> type;
 			system("cls");
 			if (std::cin.fail()) {
@@ -142,7 +143,7 @@ void RaceAirGround::raceBegin(int distance) {
 	int input;
 	do {
 		do {
-			if (transportsForRace.size() < 2) std::cout << "Должно быть зарегестрировано хотя бы 2 транспортных средства" << std::endl;
+			std::cout << "Должно быть зарегестрировано хотя бы 2 транспортных средства" << std::endl;
 			std::cout << "1. Зарегестрировать транспорт" << std::endl;
 			if (transportsForRace.size() >= 2) std::cout << "2. Начать гонку" << std::endl;
 			std::cout << "Выберите действие: ";

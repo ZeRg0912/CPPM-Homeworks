@@ -12,7 +12,7 @@ CENTAUR::CENTAUR() : GROUND() {
 	this->quantityOfRests = 0;
 };
 
-int CENTAUR::raceTime(float _distance) {
+float CENTAUR::raceTime(float _distance) {
 	float time = 0;
 	float rest = 0;
 	int stops = _distance / wayToRest;

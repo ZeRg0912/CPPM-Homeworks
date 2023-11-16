@@ -4,7 +4,7 @@
 class BROOMSTICK : public AIR {
 public:
 	BROOMSTICK();
-	int raceTime(float _distance) override;
+	float raceTime(float _distance) override;
 protected:
 	BROOMSTICK(int _speed, int _distanceReduction);
 };
