@@ -70,9 +70,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>E:\altw\Мага\CPPM-Homeworks\Project\RacingSimulator\RacingLib\x64\Debug;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -107,12 +104,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\altw\Мага\CPPM-Homeworks\Project\RacingSimulator\RacingLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>RacingLib\x64\Debug\RacingLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,7 +127,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Race\Race.cpp" />
+    <ClCompile Include="Race\RaceAir.cpp" />
+    <ClCompile Include="Race\RaceAirGround.cpp" />
+    <ClCompile Include="Race\RaceGround.cpp" />
     <ClCompile Include="RacingSimulator.cpp" />
+    <ClCompile Include="Transports\Flying\AIR.cpp" />
+    <ClCompile Include="Transports\Flying\BROOMSTICK.cpp" />
+    <ClCompile Include="Transports\Flying\EAGLE.cpp" />
+    <ClCompile Include="Transports\Flying\MAGIC_CARPET.cpp" />
+    <ClCompile Include="Transports\Ground\ALL_TERRAIN_BOOTS.cpp" />
+    <ClCompile Include="Transports\Ground\CAMEL.cpp" />
+    <ClCompile Include="Transports\Ground\CENTAUR.cpp" />
+    <ClCompile Include="Transports\Ground\FAST_CAMEL.cpp" />
+    <ClCompile Include="Transports\Ground\GROUND.cpp" />
+    <ClCompile Include="Transports\TRANSPORT.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Race\Race.h" />
+    <ClInclude Include="Race\RaceAir.h" />
+    <ClInclude Include="Race\RaceAirGround.h" />
+    <ClInclude Include="Race\RaceGround.h" />
+    <ClInclude Include="RacingSimulator.h" />
+    <ClInclude Include="Transports\Flying\AIR.h" />
+    <ClInclude Include="Transports\Flying\BROOMSTICK.h" />
+    <ClInclude Include="Transports\Flying\EAGLE.h" />
+    <ClInclude Include="Transports\Flying\MAGIC_CARPET.h" />
+    <ClInclude Include="Transports\Ground\ALL_TERRAIN_BOOTS.h" />
+    <ClInclude Include="Transports\Ground\CAMEL.h" />
+    <ClInclude Include="Transports\Ground\CENTAUR.h" />
+    <ClInclude Include="Transports\Ground\FAST_CAMEL.h" />
+    <ClInclude Include="Transports\Ground\GROUND.h" />
+    <ClInclude Include="Transports\TRANSPORT.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

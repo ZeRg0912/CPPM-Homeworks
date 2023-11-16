@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Transports">
+      <UniqueIdentifier>{aa27784b-674b-42e8-8017-4fa9b33e0060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Race">
+      <UniqueIdentifier>{02bd95ba-abcb-42c1-8177-d3575cdc8951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Transports\Ground">
+      <UniqueIdentifier>{d4597dd3-cfa9-4806-86e7-35372a6e344b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Transports\Flying">
+      <UniqueIdentifier>{4902f82f-923b-429f-ae9d-bec5cfef31d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Transports">
+      <UniqueIdentifier>{9607c7e5-c33a-4b5e-ae6d-f255f76a423b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Race">
+      <UniqueIdentifier>{0b515206-9ce7-478b-9adb-8779af2a5174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Transports\Ground">
+      <UniqueIdentifier>{b3e8fefc-cf7f-44a2-9fdc-0905e22fe5ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Transports\Flying">
+      <UniqueIdentifier>{34cd9e9a-8060-4b16-9169-ad6fc1c14355}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Transports\Flying\AIR.cpp">
+      <Filter>Исходные файлы\Transports\Flying</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Ground\ALL_TERRAIN_BOOTS.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Flying\BROOMSTICK.cpp">
+      <Filter>Исходные файлы\Transports\Flying</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Flying\MAGIC_CARPET.cpp">
+      <Filter>Исходные файлы\Transports\Flying</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Flying\EAGLE.cpp">
+      <Filter>Исходные файлы\Transports\Flying</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Ground\CAMEL.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Ground\CENTAUR.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Ground\FAST_CAMEL.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\Ground\GROUND.cpp">
+      <Filter>Исходные файлы\Transports\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="RacingLib.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Race\RaceAir.cpp">
+      <Filter>Исходные файлы\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="Race\RaceAirGround.cpp">
+      <Filter>Исходные файлы\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="Race\RaceGround.cpp">
+      <Filter>Исходные файлы\Race</Filter>
+    </ClCompile>
+    <ClCompile Include="Transports\TRANSPORT.cpp">
+      <Filter>Исходные файлы\Transports</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RacingLib.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Flying\AIR.h">
+      <Filter>Файлы заголовков\Transports\Flying</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Flying\EAGLE.h">
+      <Filter>Файлы заголовков\Transports\Flying</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Flying\MAGIC_CARPET.h">
+      <Filter>Файлы заголовков\Transports\Flying</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Flying\BROOMSTICK.h">
+      <Filter>Файлы заголовков\Transports\Flying</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Ground\ALL_TERRAIN_BOOTS.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Ground\CAMEL.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Ground\CENTAUR.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Ground\FAST_CAMEL.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\Ground\GROUND.h">
+      <Filter>Файлы заголовков\Transports\Ground</Filter>
+    </ClInclude>
+    <ClInclude Include="Transports\TRANSPORT.h">
+      <Filter>Файлы заголовков\Transports</Filter>
+    </ClInclude>
+    <ClInclude Include="Race\RaceAir.h">
+      <Filter>Файлы заголовков\Race</Filter>
+    </ClInclude>
+    <ClInclude Include="Race\RaceAirGround.h">
+      <Filter>Файлы заголовков\Race</Filter>
+    </ClInclude>
+    <ClInclude Include="Race\RaceGround.h">
+      <Filter>Файлы заголовков\Race</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
