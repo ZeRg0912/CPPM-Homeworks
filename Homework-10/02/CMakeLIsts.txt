@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(my_second_cmake_project)
+include_directories(Figures)
+set(source_exe my_second_cmake_project.h my_second_cmake_project.cpp)
+add_executable(my_second_cmake_project ${source_exe})
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+add_subdirectory(Figures)
+target_link_libraries(my_second_cmake_project FigureLib)
