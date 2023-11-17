@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Race.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Race\RaceAir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Race\RaceAirGround.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Race\RaceGround.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\TRANSPORT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Flying\AIR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Flying\BROOMSTICK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Flying\EAGLE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Flying\MAGIC_CARPET.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Ground\GROUND.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Ground\ALL_TERRAIN_BOOTS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Ground\CAMEL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Ground\CENTAUR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\Transports\Ground\FAST_CAMEL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\Libs\RacingLib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5FD8B4AC-46F9-3E2B-8527-5024B9524029}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

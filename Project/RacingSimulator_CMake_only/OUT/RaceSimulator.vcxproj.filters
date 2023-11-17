@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\RacingSimulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\RacingSimulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{36C27411-377A-31AB-96FE-A7205B1286CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5FD8B4AC-46F9-3E2B-8527-5024B9524029}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
