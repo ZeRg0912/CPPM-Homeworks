@@ -10,7 +10,7 @@ protected:
 	int quantityOfRests = 0;
 	float distanceReduction = 0;
 
-	float distanceTime = 0;
+	int distanceTime = 0;
 
 public:
 	std::string getName();
@@ -19,7 +19,7 @@ public:
 	int getRestTime();
 	int checkQuantityOfRests();
 	int getDistanceReduction();
-	float getDistanceTime();
+	int getDistanceTime();
 
 	virtual int raceTime(float _distance);
 };
