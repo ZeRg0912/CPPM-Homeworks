@@ -133,11 +133,13 @@ public:
 	}
 
 	Fraction operator++ (int) {
-		numerator_ = numerator_ + denominator_;
 		int NOD_ = NOD(numerator_, denominator_);
 		numerator_ = numerator_ / NOD_;
 		denominator_ = denominator_ / NOD_;
-		return Fraction(numerator_, denominator_);
+		int temp_numerator_ = numerator_;
+		int temp_denominator = denominator_;
+		numerator_ = numerator_ + denominator_;
+		return Fraction(temp_numerator_, temp_denominator);
 	}
 
 	Fraction operator-- () {
@@ -149,11 +151,13 @@ public:
 	}
 
 	Fraction operator-- (int) {
-		numerator_ = numerator_ - denominator_;
 		int NOD_ = NOD(numerator_, denominator_);
 		numerator_ = numerator_ / NOD_;
 		denominator_ = denominator_ / NOD_;
-		return Fraction(numerator_, denominator_);
+		int temp_numerator_ = numerator_;
+		int temp_denominator = denominator_;
+		numerator_ = numerator_ - denominator_;
+		return Fraction(temp_numerator_, temp_denominator);
 	}
 
 	friend ostream& operator<< (ostream& left, Fraction right);
@@ -178,16 +182,24 @@ int main()
 	f1.setFraction();
 	cout << "Введите вторую дробь:\n";
 	f2.setFraction();
-
+	
 	cout << f1 << " + " << f2 << " = " << f1 + f2 << endl;
 	cout << f1 << " - " << f2 << " = " << f1 - f2 << endl;
 	cout << f1 << " * " << f2 << " = " << f1 * f2 << endl;
 	cout << f1 << " / " << f2 << " = " << f1 / f2 << endl;
+	cout << "--------------------------------------------" << endl;
 	cout << "++" << f1 << " * " << f2 << " = ";
 	cout << ++f1 * f2 << endl;
 	cout << "Значение дроби 1 = " << f1.getFrac() << endl;
 	cout << f1 << "--" << " * " << f2 << " = ";
 	cout << f1-- * f2 << endl;
+	cout << "Значение дроби 1 = " << f1.getFrac() << endl;
+	cout << "--------------------------------------------" << endl;
+	cout << "--" << f1 << " * " << f2 << " = ";
+	cout << --f1 * f2 << endl;
+	cout << "Значение дроби 1 = " << f1.getFrac() << endl;
+	cout << f1 << "++" << " * " << f2 << " = ";
+	cout << f1++ * f2 << endl;
 	cout << "Значение дроби 1 = " << f1.getFrac() << endl;
 
 	return 0;
