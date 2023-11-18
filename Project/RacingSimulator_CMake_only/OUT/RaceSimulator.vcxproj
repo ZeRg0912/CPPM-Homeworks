@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RaceSimulator.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RaceSimulator</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RaceSimulator.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RaceSimulator</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\bin\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RaceSimulator.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RaceSimulator</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Нетология\Cppm\Project\RacingSimulator_CMake_only\OUT\bin\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RaceSimulator.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RaceSimulator</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -116,7 +116,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/Debug/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -126,13 +126,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>Libs\RacingLib\Debug\race_lib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Libs\RacingLib\race_lib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Debug/RaceSimulator.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Debug/RaceSimulator.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Debug/RaceSimulator.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Debug/RaceSimulator.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -171,7 +171,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/Debug/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -181,13 +181,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>Libs\RacingLib\Release\race_lib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Libs\RacingLib\race_lib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Release/RaceSimulator.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Release/RaceSimulator.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Release/RaceSimulator.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Release/RaceSimulator.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -226,7 +226,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/Debug/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -241,8 +241,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/MinSizeRel/RaceSimulator.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/MinSizeRel/RaceSimulator.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/MinSizeRel/RaceSimulator.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/MinSizeRel/RaceSimulator.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -280,7 +280,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/Debug/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/Libs/RacingLib/race_lib.dll E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,8 +295,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/RelWithDebInfo/RaceSimulator.lib</ImportLibrary>
-      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/RelWithDebInfo/RaceSimulator.pdb</ProgramDataBaseFile>
+      <ImportLibrary>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/RelWithDebInfo/RaceSimulator.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/bin/RelWithDebInfo/RaceSimulator.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

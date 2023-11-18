@@ -24,7 +24,7 @@ events:
       The output was:
       0
       Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-      Сборка начата 17.11.2023 19:02:11.
+      Сборка начата 18.11.2023 11:10:19.
       
       Проект "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\3.28.0-rc5\\CompilerIdC\\CompilerIdC.vcxproj" в узле 1 (целевые объекты по умолчанию).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           Предупреждений: 0
           Ошибок: 0
       
-      Прошло времени 00:00:00.50
+      Прошло времени 00:00:00.49
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-      Сборка начата 17.11.2023 19:02:12.
+      Сборка начата 18.11.2023 11:10:20.
       
       Проект "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\3.28.0-rc5\\CompilerIdCXX\\CompilerIdCXX.vcxproj" в узле 1 (целевые объекты по умолчанию).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           Предупреждений: 0
           Ошибок: 0
       
-      Прошло времени 00:00:00.49
+      Прошло времени 00:00:00.50
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-hqgo9m"
-      binary: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-hqgo9m"
+      source: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-8nhpbn"
+      binary: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-8nhpbn"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -137,34 +137,34 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-hqgo9m'
+        Change Dir: 'E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-8nhpbn'
         
-        Run Build Command(s): "E:/Microsoft Visual Studio/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a598e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "E:/Microsoft Visual Studio/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ca6fb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-        Сборка начата 17.11.2023 19:02:13.
+        Сборка начата 18.11.2023 11:10:21.
         
-        Проект "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-hqgo9m\\cmTC_a598e.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        Проект "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-8nhpbn\\cmTC_ca6fb.vcxproj" в узле 1 (целевые объекты по умолчанию).
         PrepareForBuild:
-          Создание каталога "cmTC_a598e.dir\\Debug\\".
+          Создание каталога "cmTC_ca6fb.dir\\Debug\\".
           Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-          Создание каталога "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-hqgo9m\\Debug\\".
-          Создание каталога "cmTC_a598e.dir\\Debug\\cmTC_a598e.tlog\\".
+          Создание каталога "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-8nhpbn\\Debug\\".
+          Создание каталога "cmTC_ca6fb.dir\\Debug\\cmTC_ca6fb.tlog\\".
         InitializeBuildStatus:
-          Создание "cmTC_a598e.dir\\Debug\\cmTC_a598e.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
-          Обращение к "cmTC_a598e.dir\\Debug\\cmTC_a598e.tlog\\unsuccessfulbuild".
+          Создание "cmTC_ca6fb.dir\\Debug\\cmTC_ca6fb.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_ca6fb.dir\\Debug\\cmTC_ca6fb.tlog\\unsuccessfulbuild".
         ClCompile:
-          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a598e.dir\\Debug\\\\" /Fd"cmTC_a598e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca6fb.dir\\Debug\\\\" /Fd"cmTC_ca6fb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
           Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.38.33130 для x64
           (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a598e.dir\\Debug\\\\" /Fd"cmTC_a598e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca6fb.dir\\Debug\\\\" /Fd"cmTC_ca6fb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-hqgo9m\\Debug\\cmTC_a598e.exe" /INCREMENTAL /ILK:"cmTC_a598e.dir\\Debug\\cmTC_a598e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-hqgo9m/Debug/cmTC_a598e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-hqgo9m/Debug/cmTC_a598e.lib" /MACHINE:X64  /machine:x64 cmTC_a598e.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_a598e.vcxproj -> E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-hqgo9m\\Debug\\cmTC_a598e.exe
+          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-8nhpbn\\Debug\\cmTC_ca6fb.exe" /INCREMENTAL /ILK:"cmTC_ca6fb.dir\\Debug\\cmTC_ca6fb.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-8nhpbn/Debug/cmTC_ca6fb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-8nhpbn/Debug/cmTC_ca6fb.lib" /MACHINE:X64  /machine:x64 cmTC_ca6fb.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_ca6fb.vcxproj -> E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-8nhpbn\\Debug\\cmTC_ca6fb.exe
         FinalizeBuildStatus:
-          Файл "cmTC_a598e.dir\\Debug\\cmTC_a598e.tlog\\unsuccessfulbuild" удаляется.
-          Обращение к "cmTC_a598e.dir\\Debug\\cmTC_a598e.tlog\\cmTC_a598e.lastbuildstate".
-        Сборка проекта "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-hqgo9m\\cmTC_a598e.vcxproj" завершена (целевые объекты по умолчанию).
+          Файл "cmTC_ca6fb.dir\\Debug\\cmTC_ca6fb.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_ca6fb.dir\\Debug\\cmTC_ca6fb.tlog\\cmTC_ca6fb.lastbuildstate".
+        Сборка проекта "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-8nhpbn\\cmTC_ca6fb.vcxproj" завершена (целевые объекты по умолчанию).
         
         Сборка успешно завершена.
             Предупреждений: 0
@@ -182,8 +182,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-yg6za4"
-      binary: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-yg6za4"
+      source: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-18pjmp"
+      binary: "E:/\u041d\u0435\u0442\u043e\u043b\u043e\u0433\u0438\u044f/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-18pjmp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -192,40 +192,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-yg6za4'
+        Change Dir: 'E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-18pjmp'
         
-        Run Build Command(s): "E:/Microsoft Visual Studio/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c06ea.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "E:/Microsoft Visual Studio/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0d6b6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Версия MSBuild 17.8.3+195e7f5a3 для .NET Framework
-        Сборка начата 17.11.2023 19:02:13.
+        Сборка начата 18.11.2023 11:10:21.
         
-        Проект "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-yg6za4\\cmTC_c06ea.vcxproj" в узле 1 (целевые объекты по умолчанию).
+        Проект "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-18pjmp\\cmTC_0d6b6.vcxproj" в узле 1 (целевые объекты по умолчанию).
         PrepareForBuild:
-          Создание каталога "cmTC_c06ea.dir\\Debug\\".
+          Создание каталога "cmTC_0d6b6.dir\\Debug\\".
           Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
-          Создание каталога "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-yg6za4\\Debug\\".
-          Создание каталога "cmTC_c06ea.dir\\Debug\\cmTC_c06ea.tlog\\".
+          Создание каталога "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-18pjmp\\Debug\\".
+          Создание каталога "cmTC_0d6b6.dir\\Debug\\cmTC_0d6b6.tlog\\".
         InitializeBuildStatus:
-          Создание "cmTC_c06ea.dir\\Debug\\cmTC_c06ea.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
-          Обращение к "cmTC_c06ea.dir\\Debug\\cmTC_c06ea.tlog\\unsuccessfulbuild".
+          Создание "cmTC_0d6b6.dir\\Debug\\cmTC_0d6b6.tlog\\unsuccessfulbuild", так как было задано "AlwaysCreate".
+          Обращение к "cmTC_0d6b6.dir\\Debug\\cmTC_0d6b6.tlog\\unsuccessfulbuild".
         ClCompile:
-          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c06ea.dir\\Debug\\\\" /Fd"cmTC_c06ea.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0d6b6.dir\\Debug\\\\" /Fd"cmTC_0d6b6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.38.33130 для x64
           (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c06ea.dir\\Debug\\\\" /Fd"cmTC_c06ea.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0d6b6.dir\\Debug\\\\" /Fd"cmTC_0d6b6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-yg6za4\\Debug\\cmTC_c06ea.exe" /INCREMENTAL /ILK:"cmTC_c06ea.dir\\Debug\\cmTC_c06ea.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-yg6za4/Debug/cmTC_c06ea.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-yg6za4/Debug/cmTC_c06ea.lib" /MACHINE:X64  /machine:x64 cmTC_c06ea.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_c06ea.vcxproj -> E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-yg6za4\\Debug\\cmTC_c06ea.exe
+          E:\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-18pjmp\\Debug\\cmTC_0d6b6.exe" /INCREMENTAL /ILK:"cmTC_0d6b6.dir\\Debug\\cmTC_0d6b6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-18pjmp/Debug/cmTC_0d6b6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/Нетология/Cppm/Project/RacingSimulator_CMake_only/OUT/CMakeFiles/CMakeScratch/TryCompile-18pjmp/Debug/cmTC_0d6b6.lib" /MACHINE:X64  /machine:x64 cmTC_0d6b6.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_0d6b6.vcxproj -> E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-18pjmp\\Debug\\cmTC_0d6b6.exe
         FinalizeBuildStatus:
-          Файл "cmTC_c06ea.dir\\Debug\\cmTC_c06ea.tlog\\unsuccessfulbuild" удаляется.
-          Обращение к "cmTC_c06ea.dir\\Debug\\cmTC_c06ea.tlog\\cmTC_c06ea.lastbuildstate".
-        Сборка проекта "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-yg6za4\\cmTC_c06ea.vcxproj" завершена (целевые объекты по умолчанию).
+          Файл "cmTC_0d6b6.dir\\Debug\\cmTC_0d6b6.tlog\\unsuccessfulbuild" удаляется.
+          Обращение к "cmTC_0d6b6.dir\\Debug\\cmTC_0d6b6.tlog\\cmTC_0d6b6.lastbuildstate".
+        Сборка проекта "E:\\Нетология\\Cppm\\Project\\RacingSimulator_CMake_only\\OUT\\CMakeFiles\\CMakeScratch\\TryCompile-18pjmp\\cmTC_0d6b6.vcxproj" завершена (целевые объекты по умолчанию).
         
         Сборка успешно завершена.
             Предупреждений: 0
             Ошибок: 0
         
-        Прошло времени 00:00:01.02
+        Прошло времени 00:00:00.65
         
       exitCode: 0
 ...
