@@ -4,8 +4,7 @@ enum class airTransport {
 	stick = 1, eagle, magicCarpet
 };
 
-void RaceAir::printRegisterTableMenu(int distance) {
-	std::cout << "Гонка для воздушного транспорта. Расстояние: " << distance << std::endl;
+void RaceAir::printRegisterTableMenu() {
 	std::cout << "1. Метла" << std::endl;
 	std::cout << "2. Орел" << std::endl;
 	std::cout << "3. Ковер - самолет" << std::endl;
@@ -17,8 +16,9 @@ std::vector<TRANSPORT*> RaceAir::createTransports(std::vector<TRANSPORT*>& trans
 	int type;
 	do {
 		do {
+			std::cout << "Гонка для воздушного транспорта. Расстояние: " << distance << std::endl;
 			printLastRegistredTransport(transportsForRace);
-			printRegisterTableMenu(distance);
+			printRegisterTableMenu();
 			std::cin >> type;
 			system("cls");
 			if (std::cin.fail()) {

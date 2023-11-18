@@ -21,7 +21,7 @@ public:
 	void startRace(std::vector<TRANSPORT*>& arr, int distance);
 	void printResultTable(std::vector<TRANSPORT*>& arr);
 	void printRegistredTransports(std::vector<TRANSPORT*>& arr);
-	virtual void printRegisterTableMenu(int distance);
+	virtual void printRegisterTableMenu();
 	void printLastRegistredTransport(std::vector<TRANSPORT*>& arr);
 	virtual std::vector<TRANSPORT*> createTransports(std::vector<TRANSPORT*>& arr, int distance);
 	void clearTransports(std::vector<TRANSPORT*>& arr);
