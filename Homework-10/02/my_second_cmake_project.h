@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "Figures/Triangles/triangle.h"
 #include "Figures/Triangles/rectangularTriangle.h"

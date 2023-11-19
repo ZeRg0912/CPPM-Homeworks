@@ -1,0 +1,5 @@
+E:/Нетология/Cppm/Homework-10/02/build/CMakeFiles/my_second_cmake_project.dir
+E:/Нетология/Cppm/Homework-10/02/build/CMakeFiles/ALL_BUILD.dir
+E:/Нетология/Cppm/Homework-10/02/build/CMakeFiles/ZERO_CHECK.dir
+E:/Нетология/Cppm/Homework-10/02/build/Figures/CMakeFiles/FigureLib.dir
+E:/Нетология/Cppm/Homework-10/02/build/Figures/CMakeFiles/ALL_BUILD.dir
