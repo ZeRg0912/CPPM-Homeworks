@@ -2,13 +2,7 @@
 #include <iostream>
 #include <string>
 
-#ifndef FIGURE_DLL_EXPORTS
-#define FIGURE_DLL_API __declspec(dllexport)
-#else
-#define FIGURE_DLL_API __declspec(dllimport)
-#endif
-
-class FIGURE_DLL_API figure {
+class figure {
 protected:
     std::string Name = "Фигура";
     // Стороны
@@ -46,4 +40,4 @@ public:
     bool checkSides();
 };
 
-void FIGURE_DLL_API print_info(figure& figureType);
+void print_info(figure& figureType);

@@ -2,6 +2,7 @@
 project(03)
 include_directories(Libs/Leaver)
 set(source_exe 03.cpp)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 add_executable(03 ${source_exe})
 set(LEAVER_LIB_PATH ${PROJECT_BINARY_DIR}/Libs/Leaver)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
