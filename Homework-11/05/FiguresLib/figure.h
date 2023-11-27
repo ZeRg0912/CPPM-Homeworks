@@ -2,6 +2,12 @@
 #include <iostream>
 #include <string>
 
+#ifdef LEAVER_EXPORTS
+#define LEAVER_LIBRARY_API __declspec(dllexport)
+#else
+#define LEAVER_LIBRARY_API __declspec(dllimport)
+#endif
+
 class figure {
 protected:
     std::string Name = "Фигура";
@@ -19,25 +25,25 @@ protected:
     bool fourSides = false;
 
 public:
-    std::string getName();
+    std::string LEAVER_LIBRARY_API getName();
 
-    int getSideA();
+    int LEAVER_LIBRARY_API getSideA();
 
-    int getSideB();
+    int LEAVER_LIBRARY_API getSideB();
 
-    int getSideC();
+    int LEAVER_LIBRARY_API getSideC();
 
-    int getSideD();
+    int LEAVER_LIBRARY_API getSideD();
 
-    int getAngleA();
+    int LEAVER_LIBRARY_API getAngleA();
 
-    int getAngleB();
+    int LEAVER_LIBRARY_API getAngleB();
 
-    int getAngleC();
+    int LEAVER_LIBRARY_API getAngleC();
 
-    int getAngleD();
+    int LEAVER_LIBRARY_API getAngleD();
 
-    bool checkSides();
+    bool LEAVER_LIBRARY_API checkSides();
 };
 
-void print_info(figure& figureType);
+void LEAVER_LIBRARY_API print_info(figure& figureType);
