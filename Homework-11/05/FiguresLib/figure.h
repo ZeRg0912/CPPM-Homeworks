@@ -2,10 +2,10 @@
 #include <iostream>
 #include <string>
 
-#ifdef LEAVER_EXPORTS
-#define LEAVER_LIBRARY_API __declspec(dllexport)
+#ifdef FIGURE_EXPORTS
+#define FIGURE_LIBRARY_API __declspec(dllexport)
 #else
-#define LEAVER_LIBRARY_API __declspec(dllimport)
+#define FIGURE_LIBRARY_API __declspec(dllimport)
 #endif
 
 class figure {
@@ -25,25 +25,25 @@ protected:
     bool fourSides = false;
 
 public:
-    std::string LEAVER_LIBRARY_API getName();
+    std::string FIGURE_LIBRARY_API getName();
 
-    int LEAVER_LIBRARY_API getSideA();
+    int FIGURE_LIBRARY_API getSideA();
 
-    int LEAVER_LIBRARY_API getSideB();
+    int FIGURE_LIBRARY_API getSideB();
 
-    int LEAVER_LIBRARY_API getSideC();
+    int FIGURE_LIBRARY_API getSideC();
 
-    int LEAVER_LIBRARY_API getSideD();
+    int FIGURE_LIBRARY_API getSideD();
 
-    int LEAVER_LIBRARY_API getAngleA();
+    int FIGURE_LIBRARY_API getAngleA();
 
-    int LEAVER_LIBRARY_API getAngleB();
+    int FIGURE_LIBRARY_API getAngleB();
 
-    int LEAVER_LIBRARY_API getAngleC();
+    int FIGURE_LIBRARY_API getAngleC();
 
-    int LEAVER_LIBRARY_API getAngleD();
+    int FIGURE_LIBRARY_API getAngleD();
 
-    bool LEAVER_LIBRARY_API checkSides();
+    bool FIGURE_LIBRARY_API checkSides();
 };
 
-void LEAVER_LIBRARY_API print_info(figure& figureType);
+void FIGURE_LIBRARY_API print_info(figure& figureType);
