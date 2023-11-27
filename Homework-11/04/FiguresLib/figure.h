@@ -2,13 +2,13 @@
 #include <iostream>
 #include <string>
 
-#ifndef FIGURE_DLL_EXPORTS
+#ifdef FIGURE_DLL_EXPORTS
 #define FIGURE_DLL_API __declspec(dllexport)
 #else
 #define FIGURE_DLL_API __declspec(dllimport)
 #endif
 
-class FIGURE_DLL_API figure {
+class figure {
 protected:
     std::string Name = "Фигура";
     // Стороны
@@ -25,25 +25,25 @@ protected:
     bool fourSides = false;
 
 public:
-    std::string getName();
+    std::string FIGURE_DLL_API getName();
 
-    int getSideA();
+    int FIGURE_DLL_API getSideA();
 
-    int getSideB();
+    int FIGURE_DLL_API getSideB();
 
-    int getSideC();
+    int FIGURE_DLL_API getSideC();
 
-    int getSideD();
+    int FIGURE_DLL_API getSideD();
 
-    int getAngleA();
+    int FIGURE_DLL_API getAngleA();
 
-    int getAngleB();
+    int FIGURE_DLL_API getAngleB();
 
-    int getAngleC();
+    int FIGURE_DLL_API getAngleC();
 
-    int getAngleD();
+    int FIGURE_DLL_API getAngleD();
 
-    bool checkSides();
+    bool FIGURE_DLL_API checkSides();
 };
 
 void FIGURE_DLL_API print_info(figure& figureType);
