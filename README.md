@@ -1,1 +1,1 @@
-# GIT CPPM-Homeworks
+# CPPM-Homeworks
